@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2025-07-11 Alexey Kagansky
+ * https://github.com/ale4ko69
+ */
 // Стили для основного макета приложения
 
 .app-container {
@@ -19,20 +23,20 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  
+
   ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    
+
     li {
       margin-right: 1.5rem;
-      
+
       &:last-child {
         margin-right: 0;
       }
-      
+
       a {
         color: #333;
         text-decoration: none;
@@ -40,14 +44,14 @@
         padding: 0.5rem 0;
         position: relative;
         transition: color 0.3s ease;
-        
+
         &:hover {
           color: #4a90e2;
         }
-        
+
         &.active {
           color: #4a90e2;
-          
+
           &:after {
             content: '';
             position: absolute;
@@ -77,11 +81,15 @@
   padding: 1.5rem 0;
   text-align: center;
   margin-top: auto;
-  
+
   p {
     margin: 0;
     color: #666;
     font-size: 0.9rem;
+  }
+
+  a {
+    color: #666;
   }
 }
 
@@ -89,18 +97,18 @@
 .not-found {
   text-align: center;
   padding: 3rem 0;
-  
+
   h1 {
     font-size: 5rem;
     margin: 0;
     color: #4a90e2;
   }
-  
+
   h2 {
     font-size: 2rem;
     margin: 0.5rem 0 1.5rem;
   }
-  
+
   p {
     color: #666;
     font-size: 1.1rem;

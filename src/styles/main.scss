@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2025-07-11 Alexey Kagansky
+ * https://github.com/ale4ko69
+ */
 @use "sass:color";
 
 // Импортируем все стилевые файлы с использованием @use вместо @import
@@ -11,6 +15,7 @@ $secondary-color: #f5a623;
 $text-color: #333;
 $background-color: #f8f8f8;
 $accent-color: #42b883; // Vue/Vite зеленый цвет
+$note-color: #ff9800; // Цвет для заметок
 
 // Миксины
 @mixin flex-center {
@@ -32,6 +37,18 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+
+  & a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  & a:hover {
+    color: $primary-color;
+    text-decoration: underline;
+    font-weight: 500;
+  }
 }
 
 .container {
@@ -46,11 +63,11 @@ body {
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-  
+
   &:hover {
     filter: drop-shadow(0 0 2em rgba($accent-color, 0.6));
   }
-  
+
   &.react {
     &:hover {
       filter: drop-shadow(0 0 2em rgba($primary-color, 0.6));
@@ -65,12 +82,12 @@ body {
   background-color: white;
   margin: 2em 0;
   text-align: center;
-  
+
   p {
     margin: 1em 0;
     color: color.scale($text-color, $lightness: 20%);
   }
-  
+
   code {
     background-color: color.scale($background-color, $lightness: -5%);
     padding: 0.2em 0.4em;
@@ -90,30 +107,30 @@ body {
   font-weight: 500;
   font-size: 1rem;
   margin: 0 0.5em;
-  
+
   &--primary {
     background-color: $primary-color;
     color: white;
-    
+
     &:hover {
       background-color: color.scale($primary-color, $lightness: -10%);
       transform: translateY(-2px);
     }
-    
+
     &:active {
       transform: translateY(0);
     }
   }
-  
+
   &--secondary {
     background-color: $secondary-color;
     color: white;
-    
+
     &:hover {
       background-color: color.scale($secondary-color, $lightness: -10%);
       transform: translateY(-2px);
     }
-    
+
     &:active {
       transform: translateY(0);
     }
@@ -141,13 +158,22 @@ h1 {
   flex-direction: column;
   min-height: 100vh;
   padding: 2em 0;
-  
+
   .logo-container {
     @include flex-center;
     margin-bottom: 1em;
-    
+
     a {
       margin: 0 1em;
     }
   }
+}
+
+.note-text {
+  background-color: $note-color;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  margin-top: 1em;
+  font-size: 0.9em;
 }

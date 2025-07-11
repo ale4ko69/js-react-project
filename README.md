@@ -1,3 +1,8 @@
+<!--
+ * Copyright (c) 2025-07-11 Alexey Kagansky
+ * https://github.com/ale4ko69
+ -->
+
 # React + Vite Starter Template
 
 This template is a ready-to-use solution for quickly starting the development of modern React applications. It combines the most popular and effective frontend development tools.
