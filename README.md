@@ -30,7 +30,7 @@ src/
 ├── hooks/              # Custom React hooks
 │   └── useFetchData.js  # Hook for fetching data from API
 ├── pages/              # Page components
-│   ├── Technologies/   # "About" page with nested routes
+│   ├── Technologies/   # "About Technologies" page with nested routes
 │   ├── Contact.jsx     # Contact page
 │   ├── Home.jsx        # Home page
 │   └── ReactHooks/     # Example React Hooks demonstration page
