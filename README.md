@@ -22,28 +22,32 @@ This template is a ready-to-use solution for quickly starting the development of
 - **SWC** – fast JavaScript/TypeScript compiler used in Vite
 
 ## Project Structure
-
 ```
 src/
-├── assets/          # Static assets (images, icons)
-├── components/      # Reusable components
-│   └── Layout.jsx   # Main application layout
-├── pages/           # Page components
-│   ├── About/       # "About" page with nested routes
-│   ├── Contact.jsx  # Contact page
-│   └── Home.jsx     # Home page
-├── routes/          # Routing configuration
-├── store/           # Redux store
-│   ├── index.js     # Store configuration
-│   └── slices/      # Redux slices
+├── assets/             # Static assets (images, icons)
+├── components/         # Reusable components
+│   └── Layout.jsx      # Main application layout
+├── hooks/              # Custom React hooks
+│   └── useFetchData.js  # Hook for fetching data from API
+├── pages/              # Page components
+│   ├── Technologies/   # "About" page with nested routes
+│   ├── Contact.jsx     # Contact page
+│   ├── Home.jsx        # Home page
+│   └── ReactHooks/     # Example React Hooks demonstration page
+│       ├── index.jsx   # Component implementation
+│       └── ReactHooks.module.scss # Component styles
+├── routes/             # Routing configuration
+├── store/              # Redux store
+│   ├── index.js        # Store configuration
+│   └── slices/         # Redux slices
 │       └── counterSlice.js  # Example counter slice
-├── styles/          # SCSS styles
-│   ├── about.scss   # Styles for About page
-│   ├── contact.scss # Styles for Contact page
-│   ├── layout.scss  # Styles for Layout component
-│   └── main.scss    # Main styles and imports
-└── main.jsx         # Application entry point
+├── styles/             # SCSS styles
+│   ├── about.scss      # Styles for About page
+│   ├── contact.scss    # Styles for Contact page
+│   ├── layout.scss     # Styles for Layout component
+│   └── main.scss       # Main styles
 ```
+
 
 ## Template Features
 
@@ -58,8 +62,26 @@ The project is set up with React Router v7, including:
 - Example counter slice with actions (increment, decrement, reset)
 - Integration with React components via useSelector and useDispatch hooks
 
+### Custom React Hooks
+- `useFetchData`: A reusable hook for fetching data from APIs
+  - Handles loading states
+  - Error handling
+  - Data caching
+  - Supports manual refresh functionality
+
+### React Hooks Demonstration
+The project includes a comprehensive example of React Hooks usage:
+- `ReactHooks` page demonstrates:
+  - Custom hooks implementation
+  - useState for local state management
+  - useCallback for performance optimization
+  - Data filtering functionality
+  - Conditional rendering based on state
+  - Integration with SCSS modules for styling
+
 ### Styling
 - SCSS is set up for convenient styling
+- SCSS modules for component-scoped styles
 - Styles organized by components and pages
 - Basic styling to demonstrate capabilities
 
@@ -69,48 +91,4 @@ The project is set up with React Router v7, including:
 ```bash
 git clone [repository-url]
 cd [folder-name]
-```
 
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
-
-## Available Commands
-
-- `npm run dev` – start the project in development mode
-- `npm run build` – build the project for production
-- `npm run preview` – preview the production build
-- `npm run lint` – check code with ESLint
-
-## Extending Functionality
-
-### Adding TypeScript
-If you want to use TypeScript, it is recommended to switch to the corresponding template:
-```bash
-npm create vite@latest my-app -- --template react-ts
-```
-
-Then transfer components and settings from the current project.
-
-### Extending ESLint
-For production apps, it is recommended to use TypeScript with type-aware lint rules. See more in the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts).
-
-## Why Use This Template
-
-- **Quick start** – no need to set up basic infrastructure
-- **Modern technologies** – up-to-date versions of React, Vite, and other libraries
-- **Ready-made structure** – organized folder and file structure
-- **Usage examples** – demonstration of routing, Redux, and SCSS
-- **Optimized development** – fast compilation and hot module replacement
-
-## License
-
-MIT
