@@ -1,0 +1,153 @@
+@use "sass:color";
+
+// Импортируем все стилевые файлы с использованием @use вместо @import
+@use "layout";
+@use "about";
+@use "contact";
+
+// Переменные
+$primary-color: #4a90e2;
+$secondary-color: #f5a623;
+$text-color: #333;
+$background-color: #f8f8f8;
+$accent-color: #42b883; // Vue/Vite зеленый цвет
+
+// Миксины
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+// Базовые стили
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Стили для логотипов
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  
+  &:hover {
+    filter: drop-shadow(0 0 2em rgba($accent-color, 0.6));
+  }
+  
+  &.react {
+    &:hover {
+      filter: drop-shadow(0 0 2em rgba($primary-color, 0.6));
+    }
+  }
+}
+
+// Стили для карточки
+.card {
+  @include card-shadow;
+  padding: 2em;
+  background-color: white;
+  margin: 2em 0;
+  text-align: center;
+  
+  p {
+    margin: 1em 0;
+    color: color.scale($text-color, $lightness: 20%);
+  }
+  
+  code {
+    background-color: color.scale($background-color, $lightness: -5%);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+  }
+}
+
+// Стили для кнопок
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0 0.5em;
+  
+  &--primary {
+    background-color: $primary-color;
+    color: white;
+    
+    &:hover {
+      background-color: color.scale($primary-color, $lightness: -10%);
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  &--secondary {
+    background-color: $secondary-color;
+    color: white;
+    
+    &:hover {
+      background-color: color.scale($secondary-color, $lightness: -10%);
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// Стили для текста внизу
+.read-the-docs {
+  color: color.scale($text-color, $lightness: 30%);
+  font-size: 0.9em;
+  margin-top: 2em;
+}
+
+// Стили для заголовков
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: $text-color;
+  font-weight: 700;
+}
+
+// Пример использования миксина
+.centered-content {
+  @include flex-center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2em 0;
+  
+  .logo-container {
+    @include flex-center;
+    margin-bottom: 1em;
+    
+    a {
+      margin: 0 1em;
+    }
+  }
+}
