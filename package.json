@@ -1,8 +1,27 @@
 {
   "name": "js-react-project",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ale4ko69/js-react-project"
+  },
+  "license": "MIT",
+  "author": "Alexey Kagansky - alex@kagansky.me",
+  "description": "A boilerplate for a React project with Redux, React Router, Vite, ESLint, Prettier, Sass, and SWC.",
+  "keywords": [
+    "boilerplate",
+    "react",
+    "project",
+    "redux",
+    "router",
+    "vite",
+    "component",
+    "eslint",
+    "prettier",
+    "sass",
+    "swc"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

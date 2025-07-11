@@ -5,18 +5,19 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // Импортируем компоненты макета и страниц
-import Layout                  from "../components/Layout";
-import Home                    from "../pages/Home";
-import About                   from "../pages/About";
-import Contact                 from "../pages/Contact";
+import Layout from "../components/Layout";
+import Home from "../pages/Home";
+import ReactHooks from "../pages/ReactHooks";
+import Technologies from "../pages/Technologies";
+import Contact from "../pages/Contact";
 
 // Импортируем вложенные страницы для раздела About
-import HomePage                from "../pages/About/Home";
-import ReactPage               from "../pages/About/React";
-import VitePage                from "../pages/About/Vite";
-import RouterPage              from "../pages/About/Router";
-import ReduxPage               from "../pages/About/Redux";
-import ScssPage                from "../pages/About/Scss";
+import HomePage from "../pages/Technologies/Home";
+import ReactPage from "../pages/Technologies/React";
+import VitePage from "../pages/Technologies/Vite";
+import RouterPage from "../pages/Technologies/Router";
+import ReduxPage from "../pages/Technologies/Redux";
+import ScssPage from "../pages/Technologies/Scss";
 
 const router = createBrowserRouter([
 	{
@@ -28,8 +29,12 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: "about",
-				element: <About />,
+				path: "hooks",
+				element: <ReactHooks />,
+			},
+			{
+				path: "technologies",
+				element: <Technologies />,
 				children: [
 					{
 						index: true,

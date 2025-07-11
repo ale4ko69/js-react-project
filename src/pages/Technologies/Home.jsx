@@ -1,4 +1,6 @@
-import { NavLink }        from "react-router-dom";
+import { NavLink }     from "react-router-dom";
+
+import { useSelector } from "react-redux";
 
 import { selectCount } from "../../store/slices/counterSlice";
 
