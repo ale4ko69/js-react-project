@@ -24,28 +24,28 @@ This template is a ready-to-use solution for quickly starting the development of
 ## Project Structure
 ```
 src/
-├── assets/             # Static assets (images, icons)
-├── components/         # Reusable components
-│   └── Layout.jsx      # Main application layout
-├── hooks/              # Custom React hooks
-│   └── useFetchData.js  # Hook for fetching data from API
-├── pages/              # Page components
-│   ├── Technologies/   # "About Technologies" page with nested routes
-│   ├── Contact.jsx     # Contact page
-│   ├── Home.jsx        # Home page
-│   └── ReactHooks/     # Example React Hooks demonstration page
-│       ├── index.jsx   # Component implementation
+├── assets/               # Static assets (images, icons)
+├── components/           # Reusable components
+│   └── Layout.jsx        # Main application layout
+├── hooks/                # Custom React hooks
+│   └── useFetchData.js   # Hook for fetching data from API
+├── pages/                # Page components
+│   ├── Technologies/     # "About Technologies" page with nested routes
+│   ├── Contact.jsx       # Contact page
+│   ├── Home.jsx          # Home page
+│   └── ReactHooks/       # Example React Hooks demonstration page
+│       ├── index.jsx     # Component implementation
 │       └── ReactHooks.module.scss # Component styles
-├── routes/             # Routing configuration
-├── store/              # Redux store
-│   ├── index.js        # Store configuration
-│   └── slices/         # Redux slices
+├── routes/               # Routing configuration
+├── store/                # Redux store
+│   ├── index.js          # Store configuration
+│   └── slices/           # Redux slices
 │       └── counterSlice.js  # Example counter slice
-├── styles/             # SCSS styles
-│   ├── about.scss      # Styles for About page
-│   ├── contact.scss    # Styles for Contact page
-│   ├── layout.scss     # Styles for Layout component
-│   └── main.scss       # Main styles
+├── styles/               # SCSS styles
+│   ├── about.scss        # Styles for About page
+│   ├── contact.scss      # Styles for Contact page
+│   ├── layout.scss       # Styles for Layout component
+│   └── main.scss         # Main styles
 ```
 
 
