@@ -1,3 +1,9 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:06:56         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
 function RouterPage() {
 	return (
 		<div className="tech-info">

@@ -1,3 +1,9 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:06:33         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
 import { Outlet, NavLink } from "react-router-dom";
 
 function Technologies() {

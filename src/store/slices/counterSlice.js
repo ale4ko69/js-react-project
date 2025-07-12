@@ -29,7 +29,7 @@ export const counterSlice = createSlice({
 
 export const { increment, decrement, reset, incrementByAmount } = counterSlice.actions;
 
-// Селектор для получения значения счетчика
+// Selector for obtaining a meter value
 export const selectCount = state => state.counter.value;
 
 export default counterSlice.reducer;

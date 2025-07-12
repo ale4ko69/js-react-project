@@ -4,14 +4,14 @@
  */
 import { createBrowserRouter } from "react-router-dom";
 
-// Импортируем компоненты макета и страниц
+// I import the components of the layout and pages
 import Layout from "../components/Layout";
 import Home from "../pages/Home";
 import ReactHooks from "../pages/ReactHooks";
 import Technologies from "../pages/Technologies";
 import Contact from "../pages/Contact";
 
-// Импортируем вложенные страницы для раздела About
+// I import invested pages for the ABOUT section
 import HomePage from "../pages/Technologies/Home";
 import ReactPage from "../pages/Technologies/React";
 import VitePage from "../pages/Technologies/Vite";
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
 				children: [
 					{
 						index: true,
-						element: <HomePage />, // Используем HomePage как компонент по умолчанию для About
+						element: <HomePage />, // We use homepage as a default component for ABOUT
 					},
 					{
 						path: "react",
@@ -71,8 +71,8 @@ const router = createBrowserRouter([
 				element: (
 					<div className="not-found">
 						<h1>404</h1>
-						<h2>Страница не найдена</h2>
-						<p>Извините, запрашиваемая страница не существует.</p>
+						<h2>The page is not found</h2>
+						<p>Sorry, the requested page does not exist.</p>
 					</div>
 				),
 			},

@@ -1,3 +1,9 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:06:24         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
 import { NavLink }     from "react-router-dom";
 
 import { useSelector } from "react-redux";

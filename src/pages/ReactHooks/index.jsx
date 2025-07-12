@@ -1,3 +1,10 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:04:28         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
+
 import { useState, useCallback, useEffect } from "react";
 import { CSSTransition, TransitionGroup }   from "react-transition-group";
 

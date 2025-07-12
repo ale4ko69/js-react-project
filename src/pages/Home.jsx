@@ -1,3 +1,10 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:04:03         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
+
 import { useDispatch, useSelector }                 from "react-redux";
 import { increment, decrement, reset, selectCount } from "../store/slices/counterSlice";
 import reactLogo                                    from "../assets/react.svg";

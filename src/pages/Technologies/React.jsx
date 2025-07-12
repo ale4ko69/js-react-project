@@ -1,3 +1,9 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:06:41         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
 function ReactPage() {
 	return (
 		<div className="tech-info">

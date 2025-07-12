@@ -1,3 +1,9 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:06:49         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
 function ReduxPage() {
 	return (
 		<div className="tech-info">

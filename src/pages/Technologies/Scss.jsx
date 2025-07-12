@@ -1,3 +1,9 @@
+/***************************************/
+/**  Created By (c) Kagansky Alexey   **/
+/**       2025-07-12 16:07:05         **/
+/**  https://github.com/ale4ko69      **/
+/***************************************/
+
 function ScssPage() {
 	return (
 		<div className="tech-info">
