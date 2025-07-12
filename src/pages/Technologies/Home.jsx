@@ -9,13 +9,13 @@ function HomePage() {
 
 	return (
 		<div className="tech-info">
-			<h2>Выберите технологию</h2>
+			<h2>Choose a Technology</h2>
 			<p>
-				Пожалуйста, выберите технологию из списка слева, чтобы увидеть подробную информацию о ней.
+				Please select a technology from the list on the left to see detailed information about it.
 			</p>
 			<p>
-				Здесь вы видите значение Counter: <span className={"note-text"}>{counter}</span>, который
-				изменяется на <NavLink to="/">главной странице</NavLink>.
+				Here you see the value of Counter: <span className={"note-text"}>{counter}</span>, which
+				changes to <NavLink to="/"> the main page</NavLink>.
 			</p>
 		</div>
 	);

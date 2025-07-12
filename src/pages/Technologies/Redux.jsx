@@ -4,44 +4,44 @@ function ReduxPage() {
 			<h2>Redux</h2>
 			<div className="tech-description">
 				<p>
-					Redux — это библиотека для управления состоянием JavaScript-приложений. Она помогает
-					писать приложения, которые ведут себя предсказуемо, легко тестируются и работают в
-					различных средах.
+					Redux is a library for managing state in JavaScript applications. It helps
+					write applications that behave predictably, are easy to test, and work in
+					different environments.
 				</p>
 
-				<h3>Ключевые особенности:</h3>
+				<h3>Key features:</h3>
 				<ul>
 					<li>
-						<strong>Единое хранилище состояния</strong> — всё состояние приложения хранится в одном
-						объекте
+						<strong>Single state store</strong> — all application state is stored in one
+						object
 					</li>
 					<li>
-						<strong>Неизменяемое состояние</strong> — состояние доступно только для чтения,
-						изменения происходят через чистые функции
+						<strong>Immutable state</strong> — state is read-only,
+						changes occur through pure functions
 					</li>
 					<li>
-						<strong>Редьюсеры</strong> — чистые функции, которые определяют, как состояние
-						изменяется в ответ на действия
+						<strong>Reducers</strong> — pure functions that determine how state
+						changes in response to actions
 					</li>
 					<li>
-						<strong>Действия (Actions)</strong> — объекты, описывающие, что произошло в приложении
+						<strong>Actions</strong> — objects describing what happened in the application
 					</li>
 					<li>
-						<strong>Redux DevTools</strong> — мощные инструменты для отладки состояния приложения
+						<strong>Redux DevTools</strong> — powerful tools for debugging application state
 					</li>
 				</ul>
 
 				<h3>Redux Toolkit</h3>
 				<p>
-					Redux Toolkit — это официальный рекомендуемый подход для написания логики Redux. Он
-					упрощает наиболее распространённые варианты использования Redux, включая настройку
-					хранилища, создание редьюсеров, иммутабельное обновление логики и даже создание полных
-					"слайсов" состояния.
+					Redux Toolkit is the official recommended approach for writing Redux logic. It
+					simplifies the most common use cases of Redux, including store setup,
+					creating reducers, immutable update logic, and even creating complete
+					state "slices".
 				</p>
 
 				<p>
-					Redux особенно полезен в крупных приложениях с сложным состоянием, которым необходимо
-					управлять предсказуемым образом.
+					Redux is especially useful in large applications with complex state that needs to be
+					managed in a predictable way.
 				</p>
 			</div>
 		</div>

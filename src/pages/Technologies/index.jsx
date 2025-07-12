@@ -3,16 +3,16 @@ import { Outlet, NavLink } from "react-router-dom";
 function Technologies() {
 	return (
 		<div className="about-container">
-			<h1>О проекте</h1>
+			<h1>About Project</h1>
 			<p>
-				Этот проект демонстрирует использование современных веб-технологий для разработки
-				React-приложений.
+				This project demonstrates the use of modern web technologies for development
+				React applications.
 			</p>
 
-			{/* Добавляем обертку для контента и навигации */}
+			{/* Adding a wrapper for content and navigation */}
 			<div className="about-layout">
 				<div className="about-navigation">
-					<h2>Технологии</h2>
+					<h2>Technology</h2>
 					<ul>
 						<li>
 							<NavLink to="/technologies/react" className={({ isActive }) => (isActive ? "active" : "")}>

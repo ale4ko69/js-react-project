@@ -4,46 +4,46 @@ function ScssPage() {
 			<h2>SCSS</h2>
 			<div className="tech-description">
 				<p>
-					SCSS (Sassy CSS) — это препроцессор CSS, который расширяет возможности обычного CSS,
-					добавляя переменные, вложенность, миксины, наследование и многое другое.
+					SCSS (Sassy CSS) is a CSS preprocessor that extends the capabilities of regular CSS,
+					adding variables, nesting, mixins, inheritance, and much more.
 				</p>
 
-				<h3>Ключевые особенности:</h3>
+				<h3>Key features:</h3>
 				<ul>
 					<li>
-						<strong>Переменные</strong> — позволяют хранить цвета, размеры шрифтов и другие значения
-						для повторного использования
+						<strong>Variables</strong> — allow storing colors, font sizes, and other values
+						for reuse
 					</li>
 					<li>
-						<strong>Вложенность</strong> — упрощает написание вложенных селекторов, делая код более
-						читаемым
+						<strong>Nesting</strong> — simplifies writing nested selectors, making code more
+						readable
 					</li>
 					<li>
-						<strong>Миксины</strong> — переиспользуемые блоки стилей, которые можно включать в
-						другие правила
+						<strong>Mixins</strong> — reusable blocks of styles that can be included in
+						other rules
 					</li>
 					<li>
-						<strong>Функции</strong> — встроенные функции для манипуляций с цветами, математических
-						операций и др.
+						<strong>Functions</strong> — built-in functions for color manipulation, mathematical
+						operations, and more
 					</li>
 					<li>
-						<strong>Модули</strong> — возможность разделять стили на отдельные файлы и импортировать
-						их
+						<strong>Modules</strong> — ability to separate styles into individual files and import
+						them
 					</li>
 					<li>
-						<strong>Расширения</strong> — позволяют наследовать стили от одного селектора к другому
+						<strong>Extensions</strong> — allow inheriting styles from one selector to another
 					</li>
 				</ul>
 
 				<p>
-					SCSS полностью совместим с синтаксисом CSS, что означает, что любой валидный CSS-файл
-					также является валидным SCSS-файлом. Это делает его отличным выбором для постепенного
-					внедрения в существующие проекты.
+					SCSS is fully compatible with CSS syntax, which means that any valid CSS file
+					is also a valid SCSS file. This makes it an excellent choice for gradual
+					implementation in existing projects.
 				</p>
 
 				<p>
-					В современных фронтенд-проектах SCSS часто используется вместе с такими инструментами как
-					Vite, который обеспечивает быструю компиляцию SCSS в CSS во время разработки.
+					In modern frontend projects, SCSS is often used together with tools like
+					Vite, which provides fast compilation of SCSS to CSS during development.
 				</p>
 			</div>
 		</div>

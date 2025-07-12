@@ -1,5 +1,16 @@
 import { useState, useEffect } from "react";
 
+/**
+ * Custom React hook to fetch data from a given URL.
+ *
+ * @param {string} url - The endpoint URL to fetch data from.
+ * @param {any} reload - A dependency to trigger re-fetching when changed.
+ * @returns {{ data: any, loading: boolean, error: Error|null }}
+ *   An object containing the fetched data, loading state, and any error encountered.
+ *
+ * @example
+ * const { data, loading, error } = useFetchData('/api/data', reloadFlag);
+ */
 function useFetchData(url, reload) {
 	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);

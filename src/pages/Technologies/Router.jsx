@@ -4,34 +4,34 @@ function RouterPage() {
 			<h2>React Router</h2>
 			<div className="tech-description">
 				<p>
-					React Router — это стандартная библиотека маршрутизации для React. Она позволяет создавать
-					многостраничные приложения с навигацией без перезагрузки страницы, что обеспечивает
-					плавный пользовательский опыт.
+					React Router is the standard routing library for React. It allows creating
+					multi-page applications with navigation without page reloading, which provides
+					a smooth user experience.
 				</p>
 
-				<h3>Ключевые особенности:</h3>
+				<h3>Key features:</h3>
 				<ul>
 					<li>
-						<strong>Декларативная маршрутизация</strong> — маршруты описываются как компоненты React
+						<strong>Declarative routing</strong> — routes are described as React components
 					</li>
 					<li>
-						<strong>Вложенные маршруты</strong> — поддержка иерархической структуры страниц
+						<strong>Nested routes</strong> — support for hierarchical page structure
 					</li>
 					<li>
-						<strong>Динамические маршруты</strong> — возможность передачи параметров через URL
+						<strong>Dynamic routes</strong> — ability to pass parameters through URL
 					</li>
 					<li>
-						<strong>Программная навигация</strong> — возможность управлять историей браузера из кода
+						<strong>Programmatic navigation</strong> — ability to control browser history from code
 					</li>
 					<li>
-						<strong>Ленивая загрузка</strong> — поддержка разделения кода для оптимизации
-						производительности
+						<strong>Lazy loading</strong> — support for code splitting to optimize
+						performance
 					</li>
 				</ul>
 
 				<p>
-					React Router v6 представляет собой полностью переработанную версию с улучшенным API,
-					которая делает маршрутизацию в React-приложениях еще более простой и гибкой.
+					React Router v6 represents a completely redesigned version with improved API,
+					which makes routing in React applications even simpler and more flexible.
 				</p>
 			</div>
 		</div>

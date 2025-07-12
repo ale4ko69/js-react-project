@@ -4,37 +4,37 @@ function VitePage() {
 			<h2>Vite</h2>
 			<div className="tech-description">
 				<p>
-					Vite (французское слово, означающее "быстрый") — это современный инструмент для сборки
-					фронтенд-проектов, разработанный Эваном Ю (создателем Vue.js). Vite предлагает значительно
-					улучшенный опыт разработки по сравнению с традиционными сборщиками.
+					Vite (French word meaning "fast") is a modern build tool for frontend projects,
+					developed by Evan You (creator of Vue.js). Vite offers a significantly
+					improved development experience compared to traditional bundlers.
 				</p>
 
-				<h3>Ключевые особенности:</h3>
+				<h3>Key features:</h3>
 				<ul>
 					<li>
-						<strong>Молниеносный запуск сервера разработки</strong> — благодаря использованию
-						нативных ES-модулей
+						<strong>Lightning-fast development server startup</strong> — thanks to the use of
+						native ES modules
 					</li>
 					<li>
-						<strong>Горячая замена модулей (HMR)</strong> — мгновенное обновление изменённых частей
-						приложения без перезагрузки страницы
+						<strong>Hot Module Replacement (HMR)</strong> — instant updates of changed parts of
+						the application without page reload
 					</li>
 					<li>
-						<strong>Оптимизированная сборка для продакшена</strong> — использует Rollup для создания
-						высокооптимизированных бандлов
+						<strong>Optimized production builds</strong> — uses Rollup to create
+						highly optimized bundles
 					</li>
 					<li>
-						<strong>Встроенная поддержка TypeScript, JSX, CSS и других препроцессоров</strong> — без
-						дополнительной конфигурации
+						<strong>Built-in support for TypeScript, JSX, CSS and other preprocessors</strong> — without
+						additional configuration
 					</li>
 					<li>
-						<strong>Плагинная система</strong> — позволяет легко расширять функциональность
+						<strong>Plugin system</strong> — allows easy extension of functionality
 					</li>
 				</ul>
 
 				<p>
-					Vite стал популярным выбором для современных фронтенд-проектов благодаря своей скорости и
-					простоте использования, особенно для проектов с React, Vue, Svelte и других фреймворков.
+					Vite has become a popular choice for modern frontend projects due to its speed and
+					ease of use, especially for projects with React, Vue, Svelte and other frameworks.
 				</p>
 			</div>
 		</div>

@@ -5,10 +5,21 @@
 @use "sass:color";
 @use "../../styles/main.scss" as main;
 .container {
-  padding: 20px;
-  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
 }
 
 .title {
@@ -148,4 +159,44 @@
     border-radius: 4px;
     font-size: 0.9rem;
   }
+}
+
+/* Animation for a smooth transition */
+.contentContainer {
+  position: relative;
+  min-height: 200px;
+}
+
+.fadeEnter {
+  opacity: 0;
+}
+
+.fadeEnterActive {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fadeExit {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.fadeExitActive {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.tableContainer {
+  width: 100%;
 }

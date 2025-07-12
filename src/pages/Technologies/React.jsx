@@ -4,37 +4,37 @@ function ReactPage() {
 			<h2>React</h2>
 			<div className="tech-description">
 				<p>
-					React — это JavaScript-библиотека для создания пользовательских интерфейсов, разработанная
-					Facebook. Она позволяет создавать сложные UI из небольших и изолированных частей кода,
-					называемых "компонентами".
+					React is a JavaScript library for building user interfaces, developed by
+					Facebook. It allows creating complex UIs from small and isolated pieces of code
+					called "components".
 				</p>
 
-				<h3>Ключевые особенности:</h3>
+				<h3>Key features:</h3>
 				<ul>
 					<li>
-						<strong>Компонентный подход</strong> — UI разбивается на независимые, переиспользуемые
-						компоненты
+						<strong>Component-based approach</strong> — UI is broken down into independent, reusable
+						components
 					</li>
 					<li>
-						<strong>Виртуальный DOM</strong> — эффективно обновляет только те части DOM, которые
-						изменились
+						<strong>Virtual DOM</strong> — efficiently updates only the parts of the DOM that have
+						changed
 					</li>
 					<li>
-						<strong>Однонаправленный поток данных</strong> — делает код более предсказуемым
+						<strong>One-way data flow</strong> — makes code more predictable
 					</li>
 					<li>
-						<strong>JSX</strong> — расширение синтаксиса JavaScript, позволяющее писать
-						HTML-подобный код в JavaScript
+						<strong>JSX</strong> — JavaScript syntax extension that allows writing
+						HTML-like code in JavaScript
 					</li>
 					<li>
-						<strong>Хуки</strong> — позволяют использовать состояние и другие возможности React без
-						написания классов
+						<strong>Hooks</strong> — allow using state and other React features without
+						writing classes
 					</li>
 				</ul>
 
 				<p>
-					React активно развивается и имеет большое сообщество разработчиков, что делает его одним
-					из самых популярных инструментов для создания современных веб-приложений.
+					React is actively developing and has a large community of developers, making it one
+					of the most popular tools for creating modern web applications.
 				</p>
 			</div>
 		</div>
