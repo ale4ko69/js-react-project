@@ -6,6 +6,9 @@
 
 import { useState, useEffect } from "react";
 
+import { useDispatch, useSelector } from "react-redux";
+import { setUsers, selectUsers } from "../store/slices/userSlice";
+
 /**
  * Custom React hook to fetch data from a given URL.
  *
@@ -18,24 +21,43 @@ import { useState, useEffect } from "react";
  * const { data, loading, error } = useFetchData('/api/data', reloadFlag);
  */
 function useFetchData(url, reload) {
-	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
+
+	const users = useSelector(selectUsers);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		const fetchData = async () => {
 			setLoading(true);
+
+			if (users?.length > 0) {
+				// If users are already fetched, set loading to false
+				setLoading(false);
+				if (process.env.NODE_ENV !== "production") {
+					console.log("Users already fetched:", users);
+				}
+
+				return;
+			}
+
 			try {
 				const response = await fetch(url);
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);
 				}
 				const json = await response.json();
-				setData(json);
+
+				dispatch(setUsers(json)); // Dispatch the action to set users in the Redux store
+
+				if (process.env.NODE_ENV !== "production") {
+					console.log("Fetched users:", json);
+				}
+
 				setError(null);
 			} catch (e) {
 				setError(e);
-				setData(null);
+				dispatch(setUsers([]));
 			} finally {
 				setLoading(false);
 			}
@@ -44,7 +66,7 @@ function useFetchData(url, reload) {
 		fetchData();
 	}, [url, reload]); // Re-fetch data when URL or reload changes
 
-	return { data, loading, error };
+	return { users, loading, error };
 }
 
 export default useFetchData;
