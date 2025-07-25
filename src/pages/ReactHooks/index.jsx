@@ -80,6 +80,14 @@ function ReactHooks() {
 	const errorRef = useRef(null);
 	const tableRef = useRef(null);
 
+	// Define transition classes once to reuse
+	const transitionClasses = {
+		enter: styles.fadeEnter,
+		enterActive: styles.fadeEnterActive,
+		exit: styles.fadeExit,
+		exitActive: styles.fadeExitActive,
+	};
+
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.title}>React Hook</h2>
@@ -131,7 +139,6 @@ function ReactHooks() {
 					>
 						Reload Data
 					</button>
-					&nbsp;
 					<button
 						name={"clearData"}
 						className={`${styles["button-reload"]} ${styles["primary-button"]}`}
@@ -149,14 +156,9 @@ function ReactHooks() {
 							key="loading"
 							timeout={500}
 							nodeRef={loadingRef}
-							classNames={{
-								enter: styles.fadeEnter,
-								enterActive: styles.fadeEnterActive,
-								exit: styles.fadeExit,
-								exitActive: styles.fadeExitActive,
-							}}
+							classNames={transitionClasses}
 						>
-							<div className={styles.loadingContainer}>
+							<div className={styles.loadingContainer} ref={loadingRef}>
 								<p className={styles.loading}>Loading...</p>
 							</div>
 						</CSSTransition>
@@ -165,14 +167,9 @@ function ReactHooks() {
 							key="error"
 							timeout={500}
 							nodeRef={errorRef}
-							classNames={{
-								enter: styles.fadeEnter,
-								enterActive: styles.fadeEnterActive,
-								exit: styles.fadeExit,
-								exitActive: styles.fadeExitActive,
-							}}
+							classNames={transitionClasses}
 						>
-							<div>
+							<div ref={errorRef}>
 								<p className={styles.error}>Error: {error.message}</p>
 							</div>
 						</CSSTransition>
@@ -181,14 +178,9 @@ function ReactHooks() {
 							key="table"
 							timeout={500}
 							nodeRef={tableRef}
-							classNames={{
-								enter: styles.fadeEnter,
-								enterActive: styles.fadeEnterActive,
-								exit: styles.fadeExit,
-								exitActive: styles.fadeExitActive,
-							}}
+							classNames={transitionClasses}
 						>
-							<div className={styles.tableContainer}>
+							<div className={styles.tableContainer} ref={tableRef}>
 								<table className={styles.table}>
 									<thead>
 										<tr>

@@ -35,6 +35,11 @@ function Layout() {
 			</header>
 
 			<main className="app-content">
+				{/**
+				 * <Outlet /> from react-router-dom is a placeholder component that renders the child route's
+				 * element. In your Layout.jsx, it's where the content of the current page
+				 * (Home, React Hooks, Technologies, or Contact) will be displayed within the main layout.
+				 */}
 				<Outlet />
 			</main>
 
