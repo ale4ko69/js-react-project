@@ -41,7 +41,7 @@ function HtmlToTag({ htmlContent, tag = "span", className = "", style = {}, ...p
 		className,
 		style,
 		dangerouslySetInnerHTML: { __html: htmlContent },
-		...props
+		...props,
 	});
 }
 

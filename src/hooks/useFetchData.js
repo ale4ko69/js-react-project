@@ -4,10 +4,10 @@
 /**  https://github.com/ale4ko69      **/
 /***************************************/
 
-import { useState, useEffect } from "react";
-
+import { useState, useEffect }      from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setUsers, selectUsers } from "../store/slices/userSlice";
+
+import { setUsers, selectUsers }    from "../store/slices/userSlice";
 
 /**
  * Custom React hook to fetch data from a given URL.

@@ -5,19 +5,19 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // I import the components of the layout and pages
-import Layout                  from "../components/Layout";
-import Home                    from "../pages/Home";
-import ReactHooks              from "../pages/ReactHooks";
-import Technologies            from "../pages/Technologies";
-import Contact                 from "../pages/Contact";
+import Layout from "../components/Layout";
+import Home from "../pages/Home";
+import ReactHooks from "../pages/ReactHooks";
+import Technologies from "../pages/Technologies";
+import Contact from "../pages/Contact";
 
 // I import invested pages for the ABOUT section
-import HomePage                from "../pages/Technologies/Home";
-import ReactPage               from "../pages/Technologies/React";
-import VitePage                from "../pages/Technologies/Vite";
-import RouterPage              from "../pages/Technologies/Router";
-import ReduxPage               from "../pages/Technologies/Redux";
-import ScssPage                from "../pages/Technologies/Scss";
+import HomePage from "../pages/Technologies/Home";
+import ReactPage from "../pages/Technologies/React";
+import VitePage from "../pages/Technologies/Vite";
+import RouterPage from "../pages/Technologies/Router";
+import ReduxPage from "../pages/Technologies/Redux";
+import ScssPage from "../pages/Technologies/Scss";
 
 const router = createBrowserRouter([
 	{

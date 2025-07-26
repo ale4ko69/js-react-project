@@ -5,10 +5,9 @@
 /***************************************/
 
 import { Outlet, NavLink } from "react-router-dom";
-import { useTranslation }  from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 function Technologies() {
-
 	const { t } = useTranslation();
 	// Set document title
 	document.title = t("technologies.title");
@@ -16,9 +15,7 @@ function Technologies() {
 	return (
 		<div className="about-container">
 			<h1>{t("technologies.title")}</h1>
-			<p>
-				{t("technologies.descriptionHome")}
-			</p>
+			<p>{t("technologies.descriptionHome")}</p>
 
 			{/* Adding a wrapper for content and navigation */}
 			<div className="about-layout">

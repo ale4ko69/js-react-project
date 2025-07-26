@@ -5,18 +5,17 @@
 /***************************************/
 
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
-import { CSSTransition, TransitionGroup }                    from "react-transition-group";
-import { useTranslation }                                    from "react-i18next";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { useTranslation } from "react-i18next";
 
-import { useDispatch }                                       from "react-redux";
-import { setUsers, clearUsers }                              from "../../store/slices/userSlice";
+import { useDispatch } from "react-redux";
+import { setUsers, clearUsers } from "../../store/slices/userSlice";
 
-import useFetchData                                          from "../../hooks/useFetchData";
+import useFetchData from "../../hooks/useFetchData";
 
-import HtmlToTag                                             from "../../components/HtmlToTag";
+import HtmlToTag from "../../components/HtmlToTag";
 
-import styles                                                from "./ReactHooks.module.scss"; // Import the SCSS module
-
+import styles from "./ReactHooks.module.scss"; // Import the SCSS module
 
 /**
  * This React Hook component demonstrates:
@@ -101,17 +100,13 @@ function ReactHooks() {
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.title}>{t("reactHooks.title")}</h2>
-			<p className={styles.description}>
-				{t("reactHooks.description")}
-			</p>
+			<p className={styles.description}>{t("reactHooks.description")}</p>
 			<ul className={styles.featuresList}>
 				{t("reactHooks.featuresHtml", { returnObjects: true }).map((feature, index) => (
 					<HtmlToTag key={index} htmlContent={feature} tag={"li"} />
 				))}
 			</ul>
-			<p>
-				{t("reactHooks.conclusion")}
-			</p>
+			<p>{t("reactHooks.conclusion")}</p>
 			<div className={styles.filterContainer}>
 				<div className={styles.inputDiv}>
 					<input

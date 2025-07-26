@@ -4,9 +4,9 @@
  */
 import { configureStore } from "@reduxjs/toolkit";
 
-import counterReducer     from "./slices/counterSlice";
-import userReducer        from "./slices/userSlice";
-import languageReducer    from "./slices/languageSlice";
+import counterReducer from "./slices/counterSlice";
+import userReducer from "./slices/userSlice";
+import languageReducer from "./slices/languageSlice";
 
 export const store = configureStore({
 	reducer: {

@@ -16,22 +16,22 @@ function Layout() {
 					<ul>
 						<li>
 							<NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
-								{t('header.home')}
+								{t("header.home")}
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/hooks" className={({ isActive }) => (isActive ? "active" : "")}>
-								{t('header.reactHooks')}
+								{t("header.reactHooks")}
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/technologies" className={({ isActive }) => (isActive ? "active" : "")}>
-								{t('header.technologies')}
+								{t("header.technologies")}
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
-								{t('header.contact')}
+								{t("header.contact")}
 							</NavLink>
 						</li>
 					</ul>
@@ -50,7 +50,7 @@ function Layout() {
 
 			<footer className="app-footer">
 				<p>
-					&copy; {new Date().getFullYear()} React Boilerplate. {t('footer.allRightsReserved')}{" "}
+					&copy; {new Date().getFullYear()} React Boilerplate. {t("footer.allRightsReserved")}{" "}
 					<a href="https://github.com/ale4ko69" target="_blank">
 						Alexey Kagansky
 					</a>

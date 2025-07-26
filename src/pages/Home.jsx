@@ -3,19 +3,19 @@
 /**       2025-07-12 16:04:03         **/
 /**  https://github.com/ale4ko69      **/
 /***************************************/
-import { useDispatch, useSelector }                 from "react-redux";
-import { useTranslation }                           from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { increment, decrement, reset, selectCount } from "../store/slices/counterSlice";
-import WelcomeWithDate                              from "../components/WelcomeWithDate";
-import reactLogo                                    from "../assets/react.svg";
-import scssLogo                                     from "../assets/scss.svg";
-import reduxLogo                                    from "../assets/redux.svg";
-import viteLogo                                     from "/vite.svg";
+import WelcomeWithDate from "../components/WelcomeWithDate";
+import reactLogo from "../assets/react.svg";
+import scssLogo from "../assets/scss.svg";
+import reduxLogo from "../assets/redux.svg";
+import viteLogo from "/vite.svg";
 
 function Home() {
 	const { t } = useTranslation();
 
-		// Set document title
+	// Set document title
 	document.title = t("home.title");
 
 	const count = useSelector(selectCount);
@@ -24,7 +24,7 @@ function Home() {
 	return (
 		<div className="container">
 			<div className="centered-content">
-				<h1>{t('home.title')}</h1>
+				<h1>{t("home.title")}</h1>
 				{/* Welcome component with localized date/time */}
 				<WelcomeWithDate />
 				<div className="logo-container">
@@ -42,7 +42,7 @@ function Home() {
 					</a>
 				</div>
 				<h1>Vite + React + SCSS + Redux</h1>
-				<p>{t('home.description')}</p>
+				<p>{t("home.description")}</p>
 
 				<div className="card">
 					<p>

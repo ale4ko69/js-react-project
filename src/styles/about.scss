@@ -1,163 +1,163 @@
- /**
+/**
  * Copyright (c) 2025-07-11 Alexey Kagansky
  * https: //github.com/ale4ko69
  */
 @use "sass:color";
 
- // Variables
-$primary-color   : #4a90e2;
-$secondary-color : #f5a623;
-$text-color      : #333;
-$border-color    : #e0e0e0;
+// Variables
+$primary-color: #4a90e2;
+$secondary-color: #f5a623;
+$text-color: #333;
+$border-color: #e0e0e0;
 $background-light: #f8f8f8;
 
- // ABOUT page styles
+// ABOUT page styles
 .about-container {
-  width    : 100%;
-  max-width: 1200px;
-  margin   : 0 auto;
-  padding  : 0 1rem;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
 
-  h1 {
-    margin-bottom: 0.5rem;
-  }
+	h1 {
+		margin-bottom: 0.5rem;
+	}
 
-  p {
-    color        : #555;
-    font-size    : 1.1rem;
-    line-height  : 1.6;
-    margin-bottom: 2rem;
-  }
+	p {
+		color: #555;
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
 }
 
- // New class for navigation wrapping and content
+// New class for navigation wrapping and content
 .about-layout {
-  display       : flex;
-  flex-direction: column;
-  gap           : 2rem;
-  width         : 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: 100%;
 }
 
- // Styles for navigation by technology
+// Styles for navigation by technology
 .about-navigation {
-  background-color: $background-light;
-  border-radius   : 8px;
-  padding         : 0 1.5rem;
-  margin-bottom   : 1rem;
+	background-color: $background-light;
+	border-radius: 8px;
+	padding: 0 1.5rem;
+	margin-bottom: 1rem;
 
-  h2 {
-    margin-top   : 0;
-    margin-bottom: 1rem;
-    font-size    : 1.5rem;
-    color        : $text-color;
-  }
+	h2 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		color: $text-color;
+	}
 
-  ul {
-    display       : flex;
-    flex-direction: column;  // Change column for mobile devices
-    gap           : 0.75rem;
-    list-style    : none;
-    padding       : 0;
-    margin        : 0;
+	ul {
+		display: flex;
+		flex-direction: column; // Change column for mobile devices
+		gap: 0.75rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
 
-    li {
-      width: 100%; // Full width for mobile devices
+		li {
+			width: 100%; // Full width for mobile devices
 
-      a {
-        display         : block;
-        padding         : 0.75rem 1.25rem;
-        background-color: white;
-        border          : 1px solid $border-color;
-        border-radius   : 4px;
-        text-decoration : none;
-        color           : $text-color;
-        font-weight     : 500;
-        transition      : all 0.2s ease;
+			a {
+				display: block;
+				padding: 0.75rem 1.25rem;
+				background-color: white;
+				border: 1px solid $border-color;
+				border-radius: 4px;
+				text-decoration: none;
+				color: $text-color;
+				font-weight: 500;
+				transition: all 0.2s ease;
 
-        &:hover {
-          border-color: $primary-color;
-          color       : $primary-color;
-          transform   : translateY(-2px);
-          box-shadow  : 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+				&:hover {
+					border-color: $primary-color;
+					color: $primary-color;
+					transform: translateY(-2px);
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				}
 
-        &.active {
-          background-color: $primary-color;
-          color           : white;
-          border-color    : $primary-color;
-          box-shadow      : 0 4px 6px rgba(74, 144, 226, 0.2);
-        }
-      }
-    }
-  }
+				&.active {
+					background-color: $primary-color;
+					color: white;
+					border-color: $primary-color;
+					box-shadow: 0 4px 6px rgba(74, 144, 226, 0.2);
+				}
+			}
+		}
+	}
 }
 
- // Styles for technology content
+// Styles for technology content
 .tech-info {
-  background-color: white;
-  border-radius   : 8px;
-  padding         : 2rem;
-  box-shadow      : 0 2px 4px rgba(0, 0, 0, 0.05);
+	background-color: white;
+	border-radius: 8px;
+	padding: 2rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
-  h2 {
-    color         : $primary-color;
-    margin-top    : 0;
-    margin-bottom : 1.5rem;
-    font-size     : 2rem;
-    border-bottom : 2px solid $border-color;
-    padding-bottom: 0.75rem;
-  }
+	h2 {
+		color: $primary-color;
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+		border-bottom: 2px solid $border-color;
+		padding-bottom: 0.75rem;
+	}
 
-  h3 {
-    font-size: 1.3rem;
-    margin   : 1.5rem 0 1rem;
-    color    : $text-color;
-  }
+	h3 {
+		font-size: 1.3rem;
+		margin: 1.5rem 0 1rem;
+		color: $text-color;
+	}
 
-  p {
-    margin-bottom: 1.5rem;
-    line-height  : 1.6;
-  }
+	p {
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+	}
 
-  ul {
-    padding-left : 1.5rem;
-    margin-bottom: 1.5rem;
+	ul {
+		padding-left: 1.5rem;
+		margin-bottom: 1.5rem;
 
-    li {
-      margin-bottom: 0.5rem;
-      line-height  : 1.5;
+		li {
+			margin-bottom: 0.5rem;
+			line-height: 1.5;
 
-      strong {
-        color: $secondary-color;
-      }
-    }
-  }
+			strong {
+				color: $secondary-color;
+			}
+		}
+	}
 }
 
 // Media request for adaptability
 @media (min-width: 768px) {
-  .about-layout {
-    flex-direction: row;
-    align-items   : flex-start;
-  }
+	.about-layout {
+		flex-direction: row;
+		align-items: flex-start;
+	}
 
-  .about-navigation {
-    flex         : 0 0 25%;
-    position     : sticky;
-    top          : 100px;
-    align-self   : flex-start;
-    margin-bottom: 0;
+	.about-navigation {
+		flex: 0 0 25%;
+		position: sticky;
+		top: 100px;
+		align-self: flex-start;
+		margin-bottom: 0;
 
-    ul {
-      flex-direction: column;
+		ul {
+			flex-direction: column;
 
-      li {
-        width: 100%;
-      }
-    }
-  }
+			li {
+				width: 100%;
+			}
+		}
+	}
 
-  .about-content {
-    flex: 1;
-  }
+	.about-content {
+		flex: 1;
+	}
 }

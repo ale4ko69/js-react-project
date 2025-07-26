@@ -1,91 +1,91 @@
 {
-  "header": {
-    "title": "Welcome to React Boilerplate",
-    "home": "Home",
-    "reactHooks": "React Hooks",
-    "technologies": "Technologies",
-    "contact": "Contact"
-  },
-  "footer": {
-    "allRightsReserved": "All rights reserved"
-  },
-  "languageSwitcher": {
-    "language": "Language",
-    "english": "English",
-    "russian": "Русский"
-  },
-  "home": {
-    "title": "Welcome to React Boilerplate Starter",
-    "description": "This is a starter template for building React applications with modern tools and practices",
-    "welcome": "Today is {{date, DATE_FULL}}, current time is {{time, TIME_WITH_SECONDS}}"
-  },
-  "technologies": {
-    "title": "Technologies Project",
-    "descriptionHome": "This project demonstrates the use of modern web technologies for development React applications.",
-    "technologys": "Technologies",
-    "home": {
-      "h2": "Choose a Technology",
-      "p1": "Please select a technology from the list on the left to see detailed information about it.",
-      "p2": "Here you see the value of Counter: <0>{{counter}}</0>, which changes to <1>the main page</1>."
-    },
-    "react": "React - A JavaScript library for building user interfaces",
-    "reactDescription": "React is a JavaScript library for building user interfaces, developed by Facebook. It allows developers to create large web applications that can change data without reloading the page.",
-    "vite": "Vite - A modern frontend build tool",
-    "viteDescription": "Vite (French word meaning \"fast\") is a modern build tool for frontend projects, developed by Evan You (creator of Vue.js). Vite offers a significantly improved development experience compared to traditional bundlers.",
-    "router": "React Router - Declarative routing for React",
-    "routerDescription": "React Router is the standard routing library for React. It allows creating multi-page applications with navigation without page reloading, which provides a smooth user experience.",
-    "redux": "Redux - A predictable state container for JavaScript apps",
-    "reduxDescription": "Redux is a library for managing state in JavaScript applications. It helps write applications that behave predictably, are easy to test, and work in different environments.",
-    "scss": "SCSS - CSS with superpowers",
-    "scssDescription": "SCSS (Sassy CSS) is a CSS preprocessor that extends the capabilities of regular CSS, adding variables, nesting, mixins, inheritance, and much more."
-  },
-  "reactHooks": {
-    "title": "React Hooks Example",
-    "loading": "Loading data...",
-    "error": "Error",
-    "noData": "No data available",
-    "placeholder": "Filter by name, username, or email...",
-    "btnReloadData": "Reload Data",
-    "btnClearData": "Clear Data",
-    "description": "This section demonstrates the use of React Hooks for data fetching and state management.",
-    "conclusion": "It showcases how to fetch data, handle loading and error states, filter data based on user input, and style a component using SCSS modules in a React application.",
-    "featuresHtml": [
-      "Custom React Hook (<code>useFetchData</code>): Fetches data from an API and manages loading and error states.<br/>Data taken from <a href=\"https://jsonplaceholder.typicode.com\" target=\"_blank\" rel=\"noopener noreferrer\">project jsonplaceholder</a>",
-      "State Management (<code>useState</code>): Manages the filter input value.",
-      "Filtering Data: Filters a list of users based on user input.",
-      "Conditional Rendering: Displays loading, error, or user data based on the state.",
-      "SCSS Modules: Styles the component using SCSS modules for encapsulation.",
-      "Table Display: Presents the filtered data in a table format.",
-      "TransitionGroup: allowing smooth transitions (like fade-in/fade-out) between conditional rendering using CSSTransition."
-    ],
-    "table": {
-      "id": "ID",
-      "name": "Name",
-      "username": "Username",
-      "email": "Email"
-    }
-  },
-  "contact": {
-    "title": "Contact Us",
-    "description": "If you have any questions or suggestions for improving this boilerplate, please contact us.",
-    "formLibraries": "<strong>We recommend using with forms:</strong><ul><li><strong>React Hook Form</strong> - Currently the most popular choice due to its lightweight nature, performance benefits with minimal re-renders, and easy integration with validation libraries like Zod or Yup.</li><li><strong>Formik</strong> - A well-established and comprehensive form solution with built-in state management, validation, error handling, and strong community support.</li></ul><p>These libraries would help improve your contact form by providing better form state management, validation, and error handling with less boilerplate code.</p>",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "namePlaceholder": "Enter your name",
-    "emailPlaceholder": "Enter your email",
-    "messagePlaceholder": "Enter your message",
-    "send": "Send Message"
-  },
-  "notFound": {
-    "title": "404",
-    "subtitle": "The page is not found",
-    "description": "Sorry, the requested page does not exist."
-  },
-  "dateFormats": {
-    "full": "MMMM d, yyyy",
-    "short": "MM/dd/yyyy",
-    "time": "h:mm a",
-    "timeWithSeconds": "HH:mm:ss"
-  }
+	"header": {
+		"title": "Welcome to React Boilerplate",
+		"home": "Home",
+		"reactHooks": "React Hooks",
+		"technologies": "Technologies",
+		"contact": "Contact"
+	},
+	"footer": {
+		"allRightsReserved": "All rights reserved"
+	},
+	"languageSwitcher": {
+		"language": "Language",
+		"english": "English",
+		"russian": "Русский"
+	},
+	"home": {
+		"title": "Welcome to React Boilerplate Starter",
+		"description": "This is a starter template for building React applications with modern tools and practices",
+		"welcome": "Today is {{date, DATE_FULL}}, current time is {{time, TIME_WITH_SECONDS}}"
+	},
+	"technologies": {
+		"title": "Technologies Project",
+		"descriptionHome": "This project demonstrates the use of modern web technologies for development React applications.",
+		"technologys": "Technologies",
+		"home": {
+			"h2": "Choose a Technology",
+			"p1": "Please select a technology from the list on the left to see detailed information about it.",
+			"p2": "Here you see the value of Counter: <0>{{counter}}</0>, which changes to <1>the main page</1>."
+		},
+		"react": "React - A JavaScript library for building user interfaces",
+		"reactDescription": "React is a JavaScript library for building user interfaces, developed by Facebook. It allows developers to create large web applications that can change data without reloading the page.",
+		"vite": "Vite - A modern frontend build tool",
+		"viteDescription": "Vite (French word meaning \"fast\") is a modern build tool for frontend projects, developed by Evan You (creator of Vue.js). Vite offers a significantly improved development experience compared to traditional bundlers.",
+		"router": "React Router - Declarative routing for React",
+		"routerDescription": "React Router is the standard routing library for React. It allows creating multi-page applications with navigation without page reloading, which provides a smooth user experience.",
+		"redux": "Redux - A predictable state container for JavaScript apps",
+		"reduxDescription": "Redux is a library for managing state in JavaScript applications. It helps write applications that behave predictably, are easy to test, and work in different environments.",
+		"scss": "SCSS - CSS with superpowers",
+		"scssDescription": "SCSS (Sassy CSS) is a CSS preprocessor that extends the capabilities of regular CSS, adding variables, nesting, mixins, inheritance, and much more."
+	},
+	"reactHooks": {
+		"title": "React Hooks Example",
+		"loading": "Loading data...",
+		"error": "Error",
+		"noData": "No data available",
+		"placeholder": "Filter by name, username, or email...",
+		"btnReloadData": "Reload Data",
+		"btnClearData": "Clear Data",
+		"description": "This section demonstrates the use of React Hooks for data fetching and state management.",
+		"conclusion": "It showcases how to fetch data, handle loading and error states, filter data based on user input, and style a component using SCSS modules in a React application.",
+		"featuresHtml": [
+			"Custom React Hook (<code>useFetchData</code>): Fetches data from an API and manages loading and error states.<br/>Data taken from <a href=\"https://jsonplaceholder.typicode.com\" target=\"_blank\" rel=\"noopener noreferrer\">project jsonplaceholder</a>",
+			"State Management (<code>useState</code>): Manages the filter input value.",
+			"Filtering Data: Filters a list of users based on user input.",
+			"Conditional Rendering: Displays loading, error, or user data based on the state.",
+			"SCSS Modules: Styles the component using SCSS modules for encapsulation.",
+			"Table Display: Presents the filtered data in a table format.",
+			"TransitionGroup: allowing smooth transitions (like fade-in/fade-out) between conditional rendering using CSSTransition."
+		],
+		"table": {
+			"id": "ID",
+			"name": "Name",
+			"username": "Username",
+			"email": "Email"
+		}
+	},
+	"contact": {
+		"title": "Contact Us",
+		"description": "If you have any questions or suggestions for improving this boilerplate, please contact us.",
+		"formLibraries": "<strong>We recommend using with forms:</strong><ul><li><strong>React Hook Form</strong> - Currently the most popular choice due to its lightweight nature, performance benefits with minimal re-renders, and easy integration with validation libraries like Zod or Yup.</li><li><strong>Formik</strong> - A well-established and comprehensive form solution with built-in state management, validation, error handling, and strong community support.</li></ul><p>These libraries would help improve your contact form by providing better form state management, validation, and error handling with less boilerplate code.</p>",
+		"name": "Name",
+		"email": "Email",
+		"message": "Message",
+		"namePlaceholder": "Enter your name",
+		"emailPlaceholder": "Enter your email",
+		"messagePlaceholder": "Enter your message",
+		"send": "Send Message"
+	},
+	"notFound": {
+		"title": "404",
+		"subtitle": "The page is not found",
+		"description": "Sorry, the requested page does not exist."
+	},
+	"dateFormats": {
+		"full": "MMMM d, yyyy",
+		"short": "MM/dd/yyyy",
+		"time": "h:mm a",
+		"timeWithSeconds": "HH:mm:ss"
+	}
 }

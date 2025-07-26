@@ -12,7 +12,7 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
-        implementation: sass,
+				implementation: sass,
 				// Here you can add global variables or Sass mixes.
 				// additionalData: `@import "./src/styles/variables.scss";`
 			},

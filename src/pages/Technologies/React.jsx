@@ -6,7 +6,6 @@
 import { useTranslation } from "react-i18next";
 
 function ReactPage() {
-
 	const { t } = useTranslation();
 
 	document.title = `${t("technologies.title")} - React`;
@@ -15,9 +14,7 @@ function ReactPage() {
 		<div className="tech-info">
 			<h2>{t("technologies.react")}</h2>
 			<div className="tech-description">
-				<p>
-					{t("technologies.reactDescription")}
-				</p>
+				<p>{t("technologies.reactDescription")}</p>
 
 				<h3>Key features:</h3>
 				<ul>

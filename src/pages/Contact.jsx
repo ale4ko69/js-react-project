@@ -4,7 +4,7 @@
 /**  https://github.com/ale4ko69      **/
 /***************************************/
 import { useTranslation } from "react-i18next";
-import HtmlToTag          from "../components/HtmlToTag";
+import HtmlToTag from "../components/HtmlToTag";
 
 function Contact() {
 	const { t } = useTranslation();

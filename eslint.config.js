@@ -2,12 +2,12 @@
  * Copyright (c) 2025-07-11 Alexey Kagansky
  * https: //github.com/ale4ko69
  */
-import js                 from "@eslint/js";
-import globals            from "globals";
-import reactHooks         from "eslint-plugin-react-hooks";
-import reactRefresh       from "eslint-plugin-react-refresh";
-import prettier           from "eslint-config-prettier";
-import unusedImports      from "eslint-plugin-unused-imports";
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import prettier from "eslint-config-prettier";
+import unusedImports from "eslint-plugin-unused-imports";
 import eslintPluginImport from "eslint-plugin-import";
 
 export default [
@@ -56,8 +56,8 @@ export default [
 					groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
 					"newlines-between": "always",
 				},
-        "no-duplicate-imports": "error",
 			],
+			"no-duplicate-imports": "error",
 		},
 	},
 	prettier, // Добавляем конфигурацию Prettier в конец, чтобы она переопределила конфликтующие правила ESLint

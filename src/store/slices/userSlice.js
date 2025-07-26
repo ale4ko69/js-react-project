@@ -21,15 +21,15 @@ export const userSlice = createSlice({
 	name: "users",
 	initialState,
 	reducers: {
-		setUsers: (state, action) =>{
+		setUsers: (state, action) => {
 			state.users = action.payload || [];
 		},
-        addUser: (state, action) => {
-            state.users.push(action.payload);
-        },
-        clearUsers: (state) => {
-            state.users = [];
-        }
+		addUser: (state, action) => {
+			state.users.push(action.payload);
+		},
+		clearUsers: state => {
+			state.users = [];
+		},
 	},
 });
 

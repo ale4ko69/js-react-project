@@ -5,9 +5,7 @@
 /***************************************/
 import { useTranslation } from "react-i18next";
 
-
 function RouterPage() {
-
 	const { t } = useTranslation();
 
 	document.title = `${t("technologies.title")} - React Router`;
@@ -16,9 +14,7 @@ function RouterPage() {
 		<div className="tech-info">
 			<h2>{t("technologies.router")}</h2>
 			<div className="tech-description">
-				<p>
-					{t("technologies.routerDescription")}
-				</p>
+				<p>{t("technologies.routerDescription")}</p>
 
 				<h3>Key features:</h3>
 				<ul>
@@ -35,14 +31,13 @@ function RouterPage() {
 						<strong>Programmatic navigation</strong> — ability to control browser history from code
 					</li>
 					<li>
-						<strong>Lazy loading</strong> — support for code splitting to optimize
-						performance
+						<strong>Lazy loading</strong> — support for code splitting to optimize performance
 					</li>
 				</ul>
 
 				<p>
-					React Router v6 represents a completely redesigned version with improved API,
-					which makes routing in React applications even simpler and more flexible.
+					React Router v6 represents a completely redesigned version with improved API, which makes
+					routing in React applications even simpler and more flexible.
 				</p>
 			</div>
 		</div>
