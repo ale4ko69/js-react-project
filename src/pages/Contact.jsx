@@ -4,6 +4,7 @@
 /**  https://github.com/ale4ko69      **/
 /***************************************/
 import { useTranslation } from "react-i18next";
+import HtmlToTag          from "../components/HtmlToTag";
 
 function Contact() {
 	const { t } = useTranslation();
@@ -15,19 +16,12 @@ function Contact() {
 		<div className="contact-container">
 			<h1>{t("contact.title")}</h1>
 			<div className="contact-content">
-				<p>
-					{t("contact.description")}
-				</p>
-
+				{<HtmlToTag tag={"p"} htmlContent={t("contact.description")} />}
+				{<HtmlToTag tag={"p"} htmlContent={t("contact.formLibraries")} />}
 				<div className="contact-form">
 					<div className="form-group">
 						<label htmlFor="name">{t("contact.name")}</label>
-						<input
-							type="text"
-							id="name"
-							name="name"
-							placeholder={t("contact.namePlaceholder")}
-						/>
+						<input type="text" id="name" name="name" placeholder={t("contact.namePlaceholder")} />
 					</div>
 
 					<div className="form-group">

@@ -3,7 +3,7 @@
  * https://github.com/ale4ko69
  */
 import { createSlice } from "@reduxjs/toolkit";
-import i18n from "../../i18n";
+import i18n            from "../../i18n";
 
 // Get initial language from localStorage or use default
 const getInitialLanguage = () => {

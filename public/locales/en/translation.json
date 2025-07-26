@@ -15,7 +15,7 @@
     "russian": "Русский"
   },
   "home": {
-    "title": "Welcome to React Boilerplate",
+    "title": "Welcome to React Boilerplate Starter",
     "description": "This is a starter template for building React applications with modern tools and practices",
     "welcome": "Today is {{date, DATE_FULL}}, current time is {{time, TIME_WITH_SECONDS}}"
   },
@@ -68,6 +68,7 @@
   "contact": {
     "title": "Contact Us",
     "description": "If you have any questions or suggestions for improving this boilerplate, please contact us.",
+    "formLibraries": "<strong>We recommend using with forms:</strong><ul><li><strong>React Hook Form</strong> - Currently the most popular choice due to its lightweight nature, performance benefits with minimal re-renders, and easy integration with validation libraries like Zod or Yup.</li><li><strong>Formik</strong> - A well-established and comprehensive form solution with built-in state management, validation, error handling, and strong community support.</li></ul><p>These libraries would help improve your contact form by providing better form state management, validation, and error handling with less boilerplate code.</p>",
     "name": "Name",
     "email": "Email",
     "message": "Message",

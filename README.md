@@ -128,7 +128,7 @@ import { useTranslation } from 'react-i18next';
 
 function MyComponent() {
   const { t } = useTranslation();
-  
+
   return <h1>{t('home.title')}</h1>;
 }
 ```
@@ -140,7 +140,7 @@ import { useTranslation } from 'react-i18next';
 function DateTimeExample() {
   const { t } = useTranslation();
   const currentDate = new Date();
-  
+
   return (
     <div>
       {t('home.welcome', {
@@ -156,4 +156,34 @@ function DateTimeExample() {
 
 The project includes a VS Code workspace configuration file (`js-react-project.code-workspace`) with the following settings:
 
-- **Comment Translation** – Configured to use Bing for translating comments in the code
+```javascript
+// Essential tools for React development
+"dbaeumer.vscode-eslint",           		// ESLint for code checking
+"esbenp.prettier-vscode",           		// Prettier for code formatting
+"editorconfig.editorconfig",        		// EditorConfig support
+
+// Automation and productivity
+"formulahendry.auto-close-tag",     		// Auto-closing of tags
+"formulahendry.auto-rename-tag",    		// Automatic renaming of tags
+"christian-kohler.path-intellisense", 		// Path autocompletion
+"christian-kohler.npm-intellisense",  		// Autocompletion of npm packages
+"steoates.autoimport",              		// Automatic import
+
+// Styling and CSS
+"bradlc.vscode-tailwindcss",        		// Tailwind CSS support
+"pranaygp.vscode-css-peek",         		// View CSS definitions
+
+// Improving code management
+"aaron-bond.better-comments",       		// Improved comments
+"intellsmi.comment-translate",      		// Translation of comments
+"alefragnani.bookmarks",            		// Bookmarks in the code
+"bierner.markdown-preview-github-styles", 	// Markdown preview in GitHub style
+"chouzz.vscode-better-align",				// Improved code alignment
+"danielcanada.align-imports", 				// Alignment of imports in the code
+"ldez.ignore-files",						// Support for .gitignore files and similar ones
+
+// Visual improvements
+"vscode-icons-team.vscode-icons",   		// File and folder icons
+"anseki.vscode-color",              		// Choosing flowers
+"bierner.color-info"                		// Information about flowers
+```

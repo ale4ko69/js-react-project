@@ -5,17 +5,17 @@
 /***************************************/
 
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { Trans, useTranslation } from "react-i18next";
+import { CSSTransition, TransitionGroup }                    from "react-transition-group";
+import { useTranslation }                                    from "react-i18next";
 
-import { useDispatch } from "react-redux";
-import { setUsers, clearUsers } from "../../store/slices/userSlice";
+import { useDispatch }                                       from "react-redux";
+import { setUsers, clearUsers }                              from "../../store/slices/userSlice";
 
-import useFetchData from "../../hooks/useFetchData";
+import useFetchData                                          from "../../hooks/useFetchData";
 
-import HtmlToTag from "../../components/HtmlToTag";
+import HtmlToTag                                             from "../../components/HtmlToTag";
 
-import styles from "./ReactHooks.module.scss"; // Import the SCSS module
+import styles                                                from "./ReactHooks.module.scss"; // Import the SCSS module
 
 
 /**

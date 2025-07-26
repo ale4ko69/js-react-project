@@ -8,9 +8,10 @@
   },
   "license": "MIT",
   "author": "Alexey Kagansky - alex@kagansky.me",
-  "description": "A boilerplate for a React project with Redux, React Router, Vite, ESLint, Prettier, Sass, and SWC.",
+  "description": "A boilerplate starter for a React project with Redux, React Router, Vite, ESLint, Prettier, Sass, and SWC.",
   "keywords": [
     "boilerplate",
+    "starter",
     "react",
     "project",
     "redux",
@@ -20,7 +21,9 @@
     "eslint",
     "prettier",
     "sass",
-    "swc"
+    "swc",
+    "i18next",
+    "Internationalization i18next"
   ],
   "scripts": {
     "dev": "vite",

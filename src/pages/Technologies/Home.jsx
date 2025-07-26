@@ -4,12 +4,13 @@
 /**  https://github.com/ale4ko69      **/
 /***************************************/
 
-import { NavLink } from "react-router-dom";
+import { NavLink }               from "react-router-dom";
+
 import { Trans, useTranslation } from "react-i18next";
+import { useSelector }           from "react-redux";
 
-import { useSelector } from "react-redux";
+import { selectCount }           from "../../store/slices/counterSlice";
 
-import { selectCount } from "../../store/slices/counterSlice";
 
 function HomePage() {
 	const { t } = useTranslation();
