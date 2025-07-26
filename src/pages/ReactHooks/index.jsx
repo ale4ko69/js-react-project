@@ -6,13 +6,17 @@
 
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Trans, useTranslation } from "react-i18next";
 
 import { useDispatch } from "react-redux";
 import { setUsers, clearUsers } from "../../store/slices/userSlice";
 
 import useFetchData from "../../hooks/useFetchData";
 
+import HtmlToTag from "../../components/HtmlToTag";
+
 import styles from "./ReactHooks.module.scss"; // Import the SCSS module
+
 
 /**
  * This React Hook component demonstrates:
@@ -28,6 +32,10 @@ import styles from "./ReactHooks.module.scss"; // Import the SCSS module
  */
 
 function ReactHooks() {
+	const { t } = useTranslation();
+
+	document.title = t("reactHooks.title");
+
 	const [filter, setFilter] = useState("");
 	const [reload, setReload] = useState(false); // State to trigger re-fetch
 	const [showContent, setShowContent] = useState(false); // State to control animation
@@ -50,6 +58,7 @@ function ReactHooks() {
 	};
 
 	const handleClearUsers = () => {
+		setFilter(""); // Reset the filter state
 		dispatch(clearUsers()); // Clear users from the Redux store
 	};
 
@@ -79,6 +88,7 @@ function ReactHooks() {
 	const loadingRef = useRef(null);
 	const errorRef = useRef(null);
 	const tableRef = useRef(null);
+	const inputRef = useRef(null);
 
 	// Define transition classes once to reuse
 	const transitionClasses = {
@@ -90,45 +100,30 @@ function ReactHooks() {
 
 	return (
 		<div className={styles.container}>
-			<h2 className={styles.title}>React Hook</h2>
-			<p className={styles.description}>This example demonstrates for Users List:</p>
+			<h2 className={styles.title}>{t("reactHooks.title")}</h2>
+			<p className={styles.description}>
+				{t("reactHooks.description")}
+			</p>
 			<ul className={styles.featuresList}>
-				<li>
-					Custom React Hook (<code>useFetchData</code>): Fetches data from an API and manages
-					loading and error states.
-					<br />
-					Data taken from{" "}
-					<a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer">
-						project jsonplaceholder
-					</a>
-				</li>
-				<li>
-					State Management (<code>useState</code>): Manages the filter input value.
-				</li>
-				<li>Filtering Data: Filters a list of users based on user input.</li>
-				<li>Conditional Rendering: Displays loading, error, or user data based on the state.</li>
-				<li>SCSS Modules: Styles the component using SCSS modules for encapsulation.</li>
-				<li>Table Display: Presents the filtered data in a table format.</li>
-				<li>
-					TransitionGroup: allowing smooth transitions (like fade-in/fade-out) between conditional
-					rendering using CSSTransition.
-				</li>
+				{t("reactHooks.featuresHtml", { returnObjects: true }).map((feature, index) => (
+					<HtmlToTag key={index} htmlContent={feature} tag={"li"} />
+				))}
 			</ul>
 			<p>
-				It showcases how to fetch data, handle loading and error states, filter data based on user
-				input, and style a component using SCSS modules in a React application.
+				{t("reactHooks.conclusion")}
 			</p>
 			<div className={styles.filterContainer}>
 				<div className={styles.inputDiv}>
 					<input
 						type="text"
 						className={styles.filterInput}
-						placeholder="Filter by name, username, or email"
+						placeholder={t("reactHooks.placeholder")}
 						value={filter}
 						onChange={handleFilterChange}
 						autoComplete="off"
 						name="filterInput"
 						disabled={!hasUsers}
+						ref={inputRef}
 					/>
 				</div>
 				<div className={styles.buttonDiv}>
@@ -137,14 +132,14 @@ function ReactHooks() {
 						className={`${styles["button-reload"]} ${styles["primary-button"]}`}
 						onClick={handleReload}
 					>
-						Reload Data
+						{t("reactHooks.btnReloadData")}
 					</button>
 					<button
 						name={"clearData"}
 						className={`${styles["button-reload"]} ${styles["primary-button"]}`}
 						onClick={handleClearUsers}
 					>
-						Clear Users
+						{t("reactHooks.btnClearData")}
 					</button>
 				</div>
 			</div>
@@ -159,7 +154,7 @@ function ReactHooks() {
 							classNames={transitionClasses}
 						>
 							<div className={styles.loadingContainer} ref={loadingRef}>
-								<p className={styles.loading}>Loading...</p>
+								<p className={styles.loading}>{t("reactHooks.loading")}</p>
 							</div>
 						</CSSTransition>
 					) : error ? (
@@ -170,7 +165,9 @@ function ReactHooks() {
 							classNames={transitionClasses}
 						>
 							<div ref={errorRef}>
-								<p className={styles.error}>Error: {error.message}</p>
+								<p className={styles.error}>
+									{t("reactHooks.error")}: {error.message}
+								</p>
 							</div>
 						</CSSTransition>
 					) : (
@@ -184,24 +181,26 @@ function ReactHooks() {
 								<table className={styles.table}>
 									<thead>
 										<tr>
-											<th>ID</th>
-											<th>Name</th>
-											<th>Username</th>
-											<th>Email</th>
+											<th>{t("reactHooks.table.id")}</th>
+											<th>{t("reactHooks.table.name")}</th>
+											<th>{t("reactHooks.table.username")}</th>
+											<th>{t("reactHooks.table.email")}</th>
 										</tr>
 									</thead>
 									<tbody>
-										{filteredUsers.length > 0 ? filteredUsers.map(user => (
-											<tr key={user.id}>
-												<td>{user.id}</td>
-												<td>{user.name}</td>
-												<td>{user.username}</td>
-												<td>{user.email}</td>
-											</tr>
-										)) : (
+										{filteredUsers.length > 0 ? (
+											filteredUsers.map(user => (
+												<tr key={user.id}>
+													<td>{user.id}</td>
+													<td>{user.name}</td>
+													<td>{user.username}</td>
+													<td>{user.email}</td>
+												</tr>
+											))
+										) : (
 											<tr>
 												<td colSpan="4" className={styles.noData}>
-													No users found
+													{t("reactHooks.noData")}
 												</td>
 											</tr>
 										)}

@@ -3,16 +3,21 @@
 /**       2025-07-12 16:06:56         **/
 /**  https://github.com/ale4ko69      **/
 /***************************************/
+import { useTranslation } from "react-i18next";
+
 
 function RouterPage() {
+
+	const { t } = useTranslation();
+
+	document.title = `${t("technologies.title")} - React Router`;
+
 	return (
 		<div className="tech-info">
-			<h2>React Router</h2>
+			<h2>{t("technologies.router")}</h2>
 			<div className="tech-description">
 				<p>
-					React Router is the standard routing library for React. It allows creating
-					multi-page applications with navigation without page reloading, which provides
-					a smooth user experience.
+					{t("technologies.routerDescription")}
 				</p>
 
 				<h3>Key features:</h3>

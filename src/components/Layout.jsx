@@ -3,8 +3,12 @@
  * https://github.com/ale4ko69
  */
 import { Outlet, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function Layout() {
+	const { t } = useTranslation();
+
 	return (
 		<div className="app-container">
 			<header className="app-header">
@@ -12,25 +16,26 @@ function Layout() {
 					<ul>
 						<li>
 							<NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
-								Home
+								{t('header.home')}
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/hooks" className={({ isActive }) => (isActive ? "active" : "")}>
-								React Hooks
+								{t('header.reactHooks')}
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/technologies" className={({ isActive }) => (isActive ? "active" : "")}>
-								Technologies
+								{t('header.technologies')}
 							</NavLink>
 						</li>
 						<li>
 							<NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
-								Contact
+								{t('header.contact')}
 							</NavLink>
 						</li>
 					</ul>
+					<LanguageSwitcher />
 				</nav>
 			</header>
 
@@ -45,7 +50,7 @@ function Layout() {
 
 			<footer className="app-footer">
 				<p>
-					&copy; {new Date().getFullYear()} React Boilerplate. All rights reserved{" "}
+					&copy; {new Date().getFullYear()} React Boilerplate. {t('footer.allRightsReserved')}{" "}
 					<a href="https://github.com/ale4ko69" target="_blank">
 						Alexey Kagansky
 					</a>

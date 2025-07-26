@@ -3,23 +3,30 @@
 /**       2025-07-12 16:04:03         **/
 /**  https://github.com/ale4ko69      **/
 /***************************************/
-
-
-import { useDispatch, useSelector }                 from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { increment, decrement, reset, selectCount } from "../store/slices/counterSlice";
-import reactLogo                                    from "../assets/react.svg";
-import scssLogo                                     from "../assets/scss.svg";
-import reduxLogo                                    from "../assets/redux.svg";
-import viteLogo                                     from "/vite.svg";
+import WelcomeWithDate from "../components/WelcomeWithDate";
+import reactLogo from "../assets/react.svg";
+import scssLogo from "../assets/scss.svg";
+import reduxLogo from "../assets/redux.svg";
+import viteLogo from "/vite.svg";
 
 function Home() {
+	const { t } = useTranslation();
+
+		// Set document title
+	document.title = t("home.title");
+
 	const count = useSelector(selectCount);
 	const dispatch = useDispatch();
 
 	return (
 		<div className="container">
 			<div className="centered-content">
-				<h1>Boilerplate for React project</h1>
+				<h1>{t('home.title')}</h1>
+				{/* Welcome component with localized date/time */}
+				<WelcomeWithDate />
 				<div className="logo-container">
 					<a href="https://vite.dev" target="_blank" rel="noreferrer">
 						<img src={viteLogo} className="logo" alt="Vite logo" />
@@ -33,9 +40,10 @@ function Home() {
 					<a href="https://redux.js.org" target="_blank" rel="noreferrer">
 						<img src={reduxLogo} className="logo redux" alt="Redux logo" />
 					</a>
-
 				</div>
 				<h1>Vite + React + SCSS + Redux</h1>
+				<p>{t('home.description')}</p>
+
 				<div className="card">
 					<p>
 						Redux count is: <strong>{count}</strong>

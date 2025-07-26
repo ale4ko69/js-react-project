@@ -3,18 +3,21 @@
 /**       2025-07-12 16:06:49         **/
 /**  https://github.com/ale4ko69      **/
 /***************************************/
+import { useTranslation } from "react-i18next";
 
 function ReduxPage() {
+
+	const { t } = useTranslation();
+
+	document.title = `${t("technologies.title")} - Redux`;
+
 	return (
 		<div className="tech-info">
-			<h2>Redux</h2>
+			<h2>{t("technologies.redux")}</h2>
 			<div className="tech-description">
 				<p>
-					Redux is a library for managing state in JavaScript applications. It helps
-					write applications that behave predictably, are easy to test, and work in
-					different environments.
+					{t("technologies.reduxDescription")}
 				</p>
-
 				<h3>Key features:</h3>
 				<ul>
 					<li>

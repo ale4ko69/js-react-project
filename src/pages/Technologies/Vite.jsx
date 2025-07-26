@@ -3,16 +3,21 @@
 /**       2025-07-12 16:07:14         **/
 /**  https://github.com/ale4ko69      **/
 /***************************************/
+import { useTranslation } from "react-i18next";
+
 
 function VitePage() {
+
+	const { t } = useTranslation();
+
+	document.title = `${t("technologies.title")} - Vite`;
+
 	return (
 		<div className="tech-info">
-			<h2>Vite</h2>
+			<h2>{t("technologies.vite")}</h2>
 			<div className="tech-description">
 				<p>
-					Vite (French word meaning "fast") is a modern build tool for frontend projects,
-					developed by Evan You (creator of Vue.js). Vite offers a significantly
-					improved development experience compared to traditional bundlers.
+					{t("technologies.viteDescription")}
 				</p>
 
 				<h3>Key features:</h3>

@@ -4,24 +4,32 @@
 /**  https://github.com/ale4ko69      **/
 /***************************************/
 
-import { NavLink }     from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
 
 import { useSelector } from "react-redux";
 
 import { selectCount } from "../../store/slices/counterSlice";
 
 function HomePage() {
+	const { t } = useTranslation();
 	const counter = useSelector(selectCount); // Get counter value from Redux
 
 	return (
 		<div className="tech-info">
-			<h2>Choose a Technology</h2>
+			<h2>{t("technologies.home.h2")}</h2>
 			<p>
-				Please select a technology from the list on the left to see detailed information about it.
+				{t("technologies.home.p1")}
 			</p>
 			<p>
-				Here you see the value of Counter: <span className={"note-text"}>{counter}</span>, which
-				changes to <NavLink to="/"> the main page</NavLink>.
+				<Trans
+					i18nKey="technologies.home.p2"
+					values={{ counter: counter }}
+					components={[
+						<span className="note-text">{counter}</span>,
+						<NavLink to="/">{t("the main page!")}</NavLink>,
+					]}
+				/>
 			</p>
 		</div>
 	);

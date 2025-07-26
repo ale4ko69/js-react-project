@@ -3,15 +3,21 @@
 /**       2025-07-12 16:07:05         **/
 /**  https://github.com/ale4ko69      **/
 /***************************************/
+import { useTranslation } from "react-i18next";
+
 
 function ScssPage() {
+
+	const { t } = useTranslation();
+
+	document.title = `${t("technologies.title")} - SCSS`;
+
 	return (
 		<div className="tech-info">
-			<h2>SCSS</h2>
+			<h2>{t("technologies.scss")}</h2>
 			<div className="tech-description">
 				<p>
-					SCSS (Sassy CSS) is a CSS preprocessor that extends the capabilities of regular CSS,
-					adding variables, nesting, mixins, inheritance, and much more.
+					{t("technologies.scssDescription")}
 				</p>
 
 				<h3>Key features:</h3>
