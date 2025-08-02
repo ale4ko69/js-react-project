@@ -13,16 +13,16 @@
 		gap: 1rem;
 		box-sizing: border-box;
 
-        h2 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
+		h2 {
+			margin: 0;
+			font-size: 1.5rem;
+		}
 
 		/* Styles for all cards */
 		.statistics-card {
 			/* --- Key properties for dynamic width --- */
 
-			min-width: 150px; /* Minimum width */
+			min-width: fit-content; /* Minimum width - 150px */
 			flex-grow: 1; /* By default, each card 'grows' by 1 fraction (1fr)*/
 
 			/*
@@ -35,7 +35,7 @@
 
 			/* --- Decorative styles for clarity --- */
 			background-color: #f0f4f8;
-			border: 1px solid #d9e2ec;
+			border: 1px solid #91d5ff;
 			border-radius: 8px;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 			transition: all 0.3s ease;
@@ -55,16 +55,21 @@
 		.statistics-card--double {
 			flex-grow: 2; /* This card will take up 2 parts (2fr) of the free space. */
 			background-color: #e6f7ff; /* Another color for clarity */
-			border-color: #91d5ff;
+
+			.card-footer {
+				border-bottom: 0px;
+			}
 		}
 
-		/* Styles for conтента внутри карточек */
+		/* Styles for content in the cards */
 		.card-title {
 			margin-top: 0;
 			margin-bottom: 8px;
 			color: #1f2937;
 			font-size: 1.2rem;
 			font-weight: 600;
+			white-space: nowrap;
+			width: max-content;
 		}
 
 		.card-content {
@@ -75,7 +80,7 @@
 		}
 
 		.card-footer {
-			padding: 0.1rem 1rem;
+			padding: 0.3rem 1rem;
 			font-size: 0.875rem;
 			background-color: #d9e2ec;
 			max-height: 50px;
@@ -87,6 +92,12 @@
 			border-top-right-radius: 0;
 			display: flex;
 			gap: 0.5rem;
+			justify-content: space-between;
+
+			& div {
+				display: flex;
+				flex-direction: column;
+			}
 		}
 
 		/* Styles for gender statistics chips */
@@ -127,8 +138,8 @@
 			}
 		}
 
-        &.no-data {
-            margin: 2rem auto;
-        }
+		&.no-data {
+			margin: 2rem auto;
+		}
 	}
 }

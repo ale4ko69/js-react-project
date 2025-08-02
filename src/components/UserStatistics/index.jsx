@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 
 import { selectUsers } from "../../store/slices/userSlice";
 import "./UserStatistics.scss";
+import { userIcons } from "../../utils";
 
 const defaultStatistics = {
 	totalUsers: 0,
@@ -88,18 +89,20 @@ function UserStatictics() {
 	const cards = [
 		{
 			title: `${t("statistics.totalUsers")} \u{1F46B}`,
+            size: 1,
 			content: <h2>{statistics.totalUsers}</h2>,
 		},
 		{
 			title: t("statistics.genderDistribution"),
+            size: 2,
 			content: (
 				<>
-					<div className="gender-chip male">
-						<span className="chip-label">{t("statistics.male")}</span>
+					<div className="gender-chip male" title={t("statistics.male")}>
+						<span className="chip-label">{userIcons["male"]}</span>
 						<span className="chip-value">{statistics.genderStats.male}</span>
 					</div>
-					<div className="gender-chip female">
-						<span className="chip-label">{t("statistics.female")}</span>
+					<div className="gender-chip female" title={t("statistics.female")}>
+						<span className="chip-label">{userIcons["female"]}</span>
 						<span className="chip-value">{statistics.genderStats.female}</span>
 					</div>
 				</>
@@ -107,14 +110,15 @@ function UserStatictics() {
 		},
 		{
 			title: t("statistics.averageAge"),
+            size: 2,
 			content: (
 				<>
-					<div className="gender-chip male">
-						<span className="chip-label">{t("statistics.male")}</span>
+					<div className="gender-chip male" title={t("statistics.male")}>
+						<span className="chip-label">{userIcons["male"]}</span>
 						<span className="chip-value">{statistics.ageStats.male}</span>
 					</div>
-					<div className="gender-chip female">
-						<span className="chip-label">{t("statistics.female")}</span>
+					<div className="gender-chip female" title={t("statistics.female")}>
+						<span className="chip-label">{userIcons["female"]}</span>
 						<span className="chip-value">{statistics.ageStats.female}</span>
 					</div>
 				</>
@@ -122,6 +126,7 @@ function UserStatictics() {
 		},
 		{
 			title: t("statistics.educationLevels"),
+            size: 2,
 			content: t("statistics.educationLevelsDescription"),
 			footer: (
 				<>
@@ -142,7 +147,7 @@ function UserStatictics() {
 				<CSSTransition key="statistics" timeout={500} classNames="fade">
 					<div className="statistics-container">
 						{cards.map((card, index) => (
-							<div className="statistics-card" key={index}>
+							<div className={`statistics-card ${card.size === 2 ? "statistics-card--double" : ""}`} key={index}>
 								<div>
 									<div className="card-title">{card.title}</div>
 									{card.content && <div className="card-content">{card.content}</div>}
@@ -156,7 +161,7 @@ function UserStatictics() {
 			) : (
 				<CSSTransition key="noData" timeout={500} classNames="fade">
 					<div className="statistics-container no-data">
-						<h2>{t("statistics.noData")}</h2>
+						<h3>{t("statistics.noData")}</h3>
 					</div>
 				</CSSTransition>
 			)}

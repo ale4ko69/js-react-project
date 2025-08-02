@@ -17,6 +17,7 @@ import HtmlToTag from "../../components/HtmlToTag";
 
 import styles from "./ReactHooks.module.scss"; // Import the SCSS module
 import UserStatictics from "../../components/UserStatistics";
+import { userIcons } from "../../utils";
 
 /**
  * This React Hook component demonstrates:
@@ -197,9 +198,9 @@ function ReactHooks({ id }) {
 													<td>{user.name}</td>
 													<td>{user.username}</td>
 													<td>{user.email}</td>
-													<td style={{textAlign: "center"}}>{user.age}</td>
+													<td style={{ textAlign: "center" }}>{user.age}</td>
 													<td>{user.education}</td>
-													<td style={{textAlign: "center"}}>{user.gender}</td>
+													<td style={{ textAlign: "center" }}>{userIcons[user.gender]}</td>
 												</tr>
 											))
 										) : (
