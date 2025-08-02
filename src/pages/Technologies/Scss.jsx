@@ -5,13 +5,13 @@
 /***************************************/
 import { useTranslation } from "react-i18next";
 
-function ScssPage() {
+function ScssPage({ id }) {
 	const { t } = useTranslation();
 
 	document.title = `${t("technologies.title")} - SCSS`;
 
 	return (
-		<div className="tech-info">
+		<div id={id} className="tech-info">
 			<h2>{t("technologies.scss")}</h2>
 			<div className="tech-description">
 				<p>{t("technologies.scssDescription")}</p>

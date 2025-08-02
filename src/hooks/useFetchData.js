@@ -4,10 +4,11 @@
 /**  https://github.com/ale4ko69      **/
 /***************************************/
 
-import { useState, useEffect }      from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { setUsers, selectUsers }    from "../store/slices/userSlice";
+import { setUsers, selectUsers } from "../store/slices/userSlice";
+import { appendRandomData } from "../utils";
 
 /**
  * Custom React hook to fetch data from a given URL.
@@ -32,8 +33,13 @@ function useFetchData(url, reload) {
 			setLoading(true);
 
 			if (users?.length > 0) {
+				// Change random data to the exiting users
+				const newData = appendRandomData(users);
+				dispatch(setUsers(newData));
+
 				// If users are already fetched, set loading to false
 				setLoading(false);
+				// eslint-disable-next-line no-undef
 				if (process.env.NODE_ENV !== "production") {
 					console.log("Users already fetched:", users);
 				}
@@ -48,8 +54,11 @@ function useFetchData(url, reload) {
 				}
 				const json = await response.json();
 
-				dispatch(setUsers(json)); // Dispatch the action to set users in the Redux store
+				const newData = appendRandomData(json); // Append random data to the fetched users
 
+				dispatch(setUsers(newData)); // Dispatch the action to set users in the Redux store
+
+				// eslint-disable-next-line no-undef
 				if (process.env.NODE_ENV !== "production") {
 					console.log("Fetched users:", json);
 				}

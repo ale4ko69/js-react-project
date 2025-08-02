@@ -1,0 +1,232 @@
+/*
+ * Basic styles of the application
+ * This file ensures that normalize styles are always compiled first.
+ */
+@use "sass:color";
+@use "../styles/variables" as *; // Using variables directly
+@use "../styles/mixins" as mix; // We use mixins with the prefix mix
+
+@layer base, layout, components, themes;
+
+@layer base {
+	//Normalize
+	/* Basic settings for HTML and body */
+	html {
+		-webkit-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+		font-size: 16px; /* Базовый размер шрифта */
+	}
+
+	body {
+		font-family:
+			-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+		font-size: 1rem;
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* We reset margin and padding for consistency. */
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	/* Normalization of header sizes */
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1.17em;
+	}
+	h4 {
+		font-size: 1em;
+	}
+	h5 {
+		font-size: 0.83em;
+	}
+	h6 {
+		font-size: 0.67em;
+	}
+
+	/* Fixing sizes for elements with large fonts */
+	.large-text {
+		font-size: 2.5em;
+		line-height: 1.2;
+	}
+
+	// Basic Styles
+	body {
+		font-family: $font-family-base;
+		color: $text-color;
+		background-color: $background-color;
+		margin: 0;
+		padding: 0;
+		line-height: $line-height-base;
+
+		& a {
+			color: $text-color;
+			text-decoration: none;
+			font-weight: $font-weight-medium;
+		}
+
+		& a:hover {
+			color: $primary-color;
+			text-decoration: underline;
+			font-weight: $font-weight-medium;
+		}
+	}
+
+	.container {
+		max-width: $container-max-width;
+		margin: 0 auto;
+		padding: $container-padding;
+	}
+
+	// Styles for logos
+	.logo {
+		height: 6em;
+		padding: $spacing-md;
+		will-change: filter;
+		transition: filter $transition-speed-normal;
+
+		&:hover {
+			filter: drop-shadow(0 0 2em rgba($accent-color, 0.6));
+		}
+
+		&.react {
+			&:hover {
+				filter: drop-shadow(0 0 2em rgba($primary-color, 0.6));
+			}
+		}
+
+		&.scss {
+			&:hover {
+				filter: drop-shadow(0 0 2em rgba($scss-color, 0.6));
+			}
+		}
+
+		&.redux {
+			&:hover {
+				filter: drop-shadow(0 0 2em rgba($redux-color, 0.6));
+			}
+		}
+	}
+
+	// Card Styles
+	.card {
+		@include mix.card-shadow;
+		padding: $spacing-lg;
+		background-color: white;
+		margin: $spacing-lg 0;
+		text-align: center;
+
+		p {
+			margin: $spacing-sm 0;
+			color: color.scale($text-color, $lightness: 20%);
+		}
+
+		code {
+			background-color: color.scale($background-color, $lightness: -5%);
+			padding: 0.2em 0.4em;
+			border-radius: $border-radius-sm;
+			font-family: "Fira Code", monospace;
+			font-size: $font-size-small;
+		}
+	}
+
+	// Button styles
+	.button {
+		@include mix.button-base;
+
+		&--primary {
+			background-color: $primary-color;
+			color: white;
+
+			&:hover {
+				background-color: color.scale($primary-color, $lightness: -10%);
+				transform: translateY(-2px);
+			}
+
+			&:active {
+				transform: translateY(0);
+			}
+		}
+
+		&--secondary {
+			background-color: $secondary-color;
+			color: white;
+
+			&:hover {
+				background-color: color.scale($secondary-color, $lightness: -10%);
+				transform: translateY(-2px);
+			}
+
+			&:active {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	// Styles for text at the bottom
+	.read-the-docs {
+		color: color.scale($text-color, $lightness: 30%);
+		font-size: $font-size-small;
+		margin-top: $spacing-lg;
+	}
+
+	// Header styles
+	h1 {
+		@include mix.heading-large;
+	}
+
+	// Example of using a mixin
+	.centered-content {
+		@include mix.flex-top;
+		flex-direction: column;
+		min-height: 100vh;
+		padding: $spacing-lg 0;
+
+		.logo-container {
+			@include mix.flex-center;
+			margin-bottom: $spacing-sm;
+
+			a {
+				margin: 0 $spacing-sm;
+			}
+		}
+	}
+
+	.note-text {
+		background-color: $note-color;
+		color: white;
+		padding: $spacing-xs $spacing-sm;
+		border-radius: $border-radius-sm;
+		margin-top: $spacing-sm;
+		font-size: $font-size-small;
+	}
+
+	.button-reload {
+		background-color: $button-green; /* Green */
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		border-radius: $border-radius-sm;
+	}
+
+	.primary-button {
+		background-color: $button-blue; /* Blue */
+	}
+} // End of base layer

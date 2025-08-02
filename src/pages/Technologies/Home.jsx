@@ -11,12 +11,12 @@ import { useSelector } from "react-redux";
 
 import { selectCount } from "../../store/slices/counterSlice";
 
-function HomePage() {
+function HomePage({ id }) {
 	const { t } = useTranslation();
 	const counter = useSelector(selectCount); // Get counter value from Redux
 
 	return (
-		<div className="tech-info">
+		<div id={id} className="tech-info">
 			<h2>{t("technologies.home.h2")}</h2>
 			<p>{t("technologies.home.p1")}</p>
 			<p>

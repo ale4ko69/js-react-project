@@ -5,13 +5,13 @@
 /***************************************/
 import { useTranslation } from "react-i18next";
 
-function VitePage() {
+function VitePage({ id }) {
 	const { t } = useTranslation();
 
 	document.title = `${t("technologies.title")} - Vite`;
 
 	return (
-		<div className="tech-info">
+		<div id={id} className="tech-info">
 			<h2>{t("technologies.vite")}</h2>
 			<div className="tech-description">
 				<p>{t("technologies.viteDescription")}</p>

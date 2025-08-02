@@ -62,7 +62,10 @@
 			"id": "ID",
 			"name": "Имя",
 			"username": "Имя пользователя",
-			"email": "Электронная почта"
+			"email": "Электронная почта",
+			"age": "Возраст",
+			"education": "Образование",
+			"gender": "Пол"
 		}
 	},
 	"contact": {
@@ -87,5 +90,16 @@
 		"short": "dd.MM.yyyy",
 		"time": "HH:mm",
 		"timeWithSeconds": "HH:mm:ss"
+	},
+	"statistics": {
+		"userStatistic": "Статистика пользователей",
+		"totalUsers": "Всего пользователей",
+		"averageAge": "Средний возраст",
+		"educationLevels": "Уровни образования",
+		"genderDistribution": "Распределение по полу",
+		"male": "Мужской",
+		"female": "Женский",
+		"educationLevelsDescription": "в процентном соотношении",
+		"noData": "Нет доступных данных для статистики"
 	}
 }

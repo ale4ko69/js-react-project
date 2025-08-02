@@ -16,6 +16,7 @@ import useFetchData from "../../hooks/useFetchData";
 import HtmlToTag from "../../components/HtmlToTag";
 
 import styles from "./ReactHooks.module.scss"; // Import the SCSS module
+import UserStatictics from "../../components/UserStatistics";
 
 /**
  * This React Hook component demonstrates:
@@ -30,7 +31,7 @@ import styles from "./ReactHooks.module.scss"; // Import the SCSS module
  * This improves user experience by animating content changes instead of switching abruptly.
  */
 
-function ReactHooks() {
+function ReactHooks({ id }) {
 	const { t } = useTranslation();
 
 	document.title = t("reactHooks.title");
@@ -98,7 +99,7 @@ function ReactHooks() {
 	};
 
 	return (
-		<div className={styles.container}>
+		<div id={id} className={styles.container}>
 			<h2 className={styles.title}>{t("reactHooks.title")}</h2>
 			<p className={styles.description}>{t("reactHooks.description")}</p>
 			<ul className={styles.featuresList}>
@@ -107,6 +108,9 @@ function ReactHooks() {
 				))}
 			</ul>
 			<p>{t("reactHooks.conclusion")}</p>
+
+			<UserStatictics />
+
 			<div className={styles.filterContainer}>
 				<div className={styles.inputDiv}>
 					<input
@@ -124,14 +128,14 @@ function ReactHooks() {
 				<div className={styles.buttonDiv}>
 					<button
 						name={"reloadData"}
-						className={`${styles["button-reload"]} ${styles["primary-button"]}`}
+						className={`${"button-reload"} ${"primary-button"}`}
 						onClick={handleReload}
 					>
 						{t("reactHooks.btnReloadData")}
 					</button>
 					<button
 						name={"clearData"}
-						className={`${styles["button-reload"]} ${styles["primary-button"]}`}
+						className={`${"button-reload"} ${"primary-button"}`}
 						onClick={handleClearUsers}
 					>
 						{t("reactHooks.btnClearData")}
@@ -180,6 +184,9 @@ function ReactHooks() {
 											<th>{t("reactHooks.table.name")}</th>
 											<th>{t("reactHooks.table.username")}</th>
 											<th>{t("reactHooks.table.email")}</th>
+											<th>{t("reactHooks.table.age")}</th>
+											<th>{t("reactHooks.table.education")}</th>
+											<th>{t("reactHooks.table.gender")}</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -190,11 +197,14 @@ function ReactHooks() {
 													<td>{user.name}</td>
 													<td>{user.username}</td>
 													<td>{user.email}</td>
+													<td>{user.age}</td>
+													<td>{user.education}</td>
+													<td>{user.gender}</td>
 												</tr>
 											))
 										) : (
 											<tr>
-												<td colSpan="4" className={styles.noData}>
+												<td colSpan="7" className={styles.noData}>
 													{t("reactHooks.noData")}
 												</td>
 											</tr>

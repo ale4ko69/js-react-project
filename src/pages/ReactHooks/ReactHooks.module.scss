@@ -3,209 +3,202 @@
  * https://github.com/ale4ko69
  */
 @use "sass:color";
-@use "../../styles/main.scss" as main;
+@use "../../styles/variables" as *; // Using variables directly
+@use "../../styles/mixins" as mix; // We use mixins with the prefix mix
 
-.container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
+@layer components {
+	.container {
+		width: 100%;
+		max-width: $container-max-width;
+		margin: 0 auto;
+		padding: 0 $spacing-sm;
 
-	h1 {
-		margin-bottom: 0.5rem;
-	}
-
-	p {
-		color: #555;
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 2rem;
-	}
-}
-
-.title {
-	color: main.$text-color;
-	margin-bottom: 20px;
-	font-size: 2em;
-	font-weight: 700;
-}
-
-.filterInput {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
-	transition: border-color 0.3s ease;
-
-	&:focus {
-		outline: none;
-		border-color: main.$primary-color;
-		box-shadow: 0 0 0 2px rgba(main.$primary-color, 0.2);
-	}
-}
-
-.table {
-	width: 100%;
-	border-collapse: collapse;
-	margin-bottom: 20px;
-	background-color: white;
-	@include main.card-shadow;
-
-	th,
-	td {
-		border: 1px solid #ddd;
-		padding: 12px;
-		text-align: left;
-	}
-
-	th {
-		background-color: color.scale(main.$background-color, $lightness: -5%);
-		font-weight: bold;
-		color: main.$text-color;
-	}
-
-	tbody tr {
-		&:nth-child(even) {
-			background-color: color.scale(main.$background-color, $lightness: 2%);
+		h1 {
+			margin-bottom: $spacing-xs;
 		}
 
-		&:hover {
-			background-color: color.scale(main.$primary-color, $lightness: 85%);
-		}
-	}
-}
-
-.error {
-	color: #e53935;
-	margin-top: 10px;
-	padding: 0.5em 1em;
-	border-radius: 4px;
-	background-color: rgba(#e53935, 0.1);
-	border-left: 3px solid #e53935;
-}
-
-.loading {
-	color: main.$primary-color;
-	margin-top: 10px;
-	@include main.flex-center;
-
-	&::before {
-		content: "";
-		display: inline-block;
-		width: 16px;
-		height: 16px;
-		margin-right: 8px;
-		border: 2px solid main.$primary-color;
-		border-radius: 50%;
-		border-top-color: transparent;
-		animation: spin 1s linear infinite;
-	}
-}
-
-@keyframes spin {
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-.filterContainer {
-	display: flex;
-	flex: 1 1 auto;
-	margin-bottom: 20px;
-
-	.inputDiv {
-		flex: 1 1 auto;
-		margin-right: 12px;
-
-		input {
-			width: 100%;
+		p {
+			color: color.scale($text-color, $lightness: 20%);
+			font-size: 1.1rem;
+			line-height: $line-height-base;
+			margin-bottom: $spacing-lg;
 		}
 	}
 
-	.buttonDiv {
-		flex: 0 0 auto;
+	.title {
+		color: $text-color;
+		margin-bottom: 20px;
+		@include mix.heading-large;
+	}
+
+	.filterInput {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: $border-radius-sm;
+		box-sizing: border-box;
+		font-family: $font-family-base;
+		@include mix.transition-standard;
+
+		&:focus {
+			outline: none;
+			border-color: $primary-color;
+			box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+		}
+	}
+
+	.table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+		background-color: white;
+		@include mix.card-shadow;
+
+		th,
+		td {
+			border: 1px solid #ddd;
+			padding: 12px;
+			text-align: left;
+		}
+
+		th {
+			background-color: color.scale($background-color, $lightness: -5%);
+			font-weight: $font-weight-bold;
+			color: $text-color;
+		}
+
+		tbody tr {
+			&:nth-child(even) {
+				background-color: color.scale($background-color, $lightness: 2%);
+			}
+
+			&:hover {
+				background-color: color.scale($primary-color, $lightness: 85%);
+			}
+		}
+	}
+
+	.error {
+		color: #e53935;
+		margin-top: 10px;
+		padding: $spacing-xs $spacing-sm;
+		border-radius: $border-radius-sm;
+		background-color: rgba(#e53935, 0.1);
+		border-left: 3px solid #e53935;
+	}
+
+	.loading {
+		color: $primary-color;
+		margin-top: 10px;
+		@include mix.flex-center;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 8px;
+			border: 2px solid $primary-color;
+			border-radius: 50%;
+			border-top-color: transparent;
+			@include mix.spin-animation;
+		}
+	}
+
+	.filterContainer {
 		display: flex;
-		align-items: center;
-		gap: 8px;
-		button {
-			min-width: 100px;
-			margin-left: 0;
+		flex: 1 1 auto;
+		margin-bottom: 20px;
+
+		.inputDiv {
+			flex: 1 1 auto;
+			margin-right: 12px;
+
+			input {
+				width: 100%;
+			}
+		}
+
+		.buttonDiv {
+			flex: 0 0 auto;
+			@include mix.flex-center;
+			gap: 8px;
+			button {
+				min-width: 100px;
+				margin-left: 0;
+			}
 		}
 	}
-}
 
-/** Description */
-.description {
-	font-size: 1rem;
-	line-height: 1.6;
-	color: #555;
-	margin-bottom: 1.5rem;
-}
-
-.featuresList {
-	list-style: disc;
-	padding-left: 2rem;
-
-	li {
-		margin-bottom: 0.5rem;
+	/** Description */
+	.description {
+		font-size: $font-size-base;
+		line-height: $line-height-base;
+		color: color.scale($text-color, $lightness: 20%);
+		margin-bottom: $spacing-lg;
 	}
 
-	code {
-		font-weight: bold;
-		background-color: #f0f0f0;
-		padding: 0.2rem 0.4rem;
-		border-radius: 4px;
-		font-size: 0.9rem;
+	.featuresList {
+		list-style: disc;
+		padding-left: $spacing-xl;
+
+		li {
+			margin-bottom: $spacing-xs;
+		}
+
+		code {
+			font-weight: $font-weight-bold;
+			background-color: color.scale($background-color, $lightness: -5%);
+			padding: 0.2rem 0.4rem;
+			border-radius: $border-radius-sm;
+			font-size: $font-size-small;
+		}
 	}
-}
 
-/* Animation for a smooth transition */
-.contentContainer {
-	position: relative;
-	min-height: 200px;
-}
+	/* Animation for a smooth transition */
+	.contentContainer {
+		position: relative;
+		min-height: 200px;
+	}
 
-.fadeEnter {
-	opacity: 0;
-}
+	.fadeEnter {
+		opacity: 0;
+	}
 
-.fadeEnterActive {
-	opacity: 1;
-	transition: opacity 500ms ease-in;
-}
+	.fadeEnterActive {
+		opacity: 1;
+		transition: opacity $transition-speed-slow ease-in;
+	}
 
-.fadeExit {
-	opacity: 1;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-}
+	.fadeExit {
+		opacity: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
 
-.fadeExitActive {
-	opacity: 0;
-	transition: opacity 500ms ease-out;
-}
+	.fadeExitActive {
+		opacity: 0;
+		transition: opacity $transition-speed-slow ease-out;
+	}
 
-.loadingContainer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 200px;
-	width: 100%;
-}
+	.loadingContainer {
+		@include mix.flex-center;
+		min-height: 200px;
+		width: 100%;
+	}
 
-.tableContainer {
-	width: 100%;
-}
+	.tableContainer {
+		width: 100%;
+	}
 
-.noData {
-	text-align: center !important;
-	color: #999;
-	font-size: 1.2rem;
-	padding: 20px;
-	background-color: #f9f9f9;
-	border-radius: 8px;
+	.noData {
+		text-align: center !important;
+		color: #999;
+		font-size: 1.2rem;
+		padding: 20px;
+		background-color: color.scale($background-color, $lightness: 5%);
+		border-radius: $border-radius-md;
+	}
 }

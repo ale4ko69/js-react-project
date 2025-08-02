@@ -7,13 +7,13 @@
 import { Outlet, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-function Technologies() {
+function Technologies({ id }) {
 	const { t } = useTranslation();
 	// Set document title
 	document.title = t("technologies.title");
 
 	return (
-		<div className="about-container">
+		<div id={id} className="about-container">
 			<h1>{t("technologies.title")}</h1>
 			<p>{t("technologies.descriptionHome")}</p>
 

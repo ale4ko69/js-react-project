@@ -5,13 +5,13 @@
 /***************************************/
 import { useTranslation } from "react-i18next";
 
-function RouterPage() {
+function RouterPage({ id }) {
 	const { t } = useTranslation();
 
 	document.title = `${t("technologies.title")} - React Router`;
 
 	return (
-		<div className="tech-info">
+		<div id={id} className="tech-info">
 			<h2>{t("technologies.router")}</h2>
 			<div className="tech-description">
 				<p>{t("technologies.routerDescription")}</p>

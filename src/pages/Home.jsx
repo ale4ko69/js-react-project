@@ -12,7 +12,7 @@ import scssLogo from "../assets/scss.svg";
 import reduxLogo from "../assets/redux.svg";
 import viteLogo from "/vite.svg";
 
-function Home() {
+function Home({ id }) {
 	const { t } = useTranslation();
 
 	// Set document title
@@ -22,7 +22,7 @@ function Home() {
 	const dispatch = useDispatch();
 
 	return (
-		<div className="container">
+		<div id={id} className="container">
 			<div className="centered-content">
 				<h1>{t("home.title")}</h1>
 				{/* Welcome component with localized date/time */}

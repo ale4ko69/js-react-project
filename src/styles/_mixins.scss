@@ -1,0 +1,145 @@
+/*
+ * Global mixins for the application
+ * This file contains all reusable mixins used throughout the app
+ */
+@use "sass:color";
+@use "variables" as *; // Importing variables for use in mixins
+
+// Flexbox mixins
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-top {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+// Shadow mixins
+@mixin card-shadow {
+	box-shadow: $shadow-md;
+	border-radius: $border-radius-md;
+}
+
+@mixin button-shadow {
+	box-shadow: $shadow-sm;
+}
+
+// Transition mixins
+@mixin transition-standard {
+	transition: all $transition-speed-normal $transition-ease;
+}
+
+@mixin transition-fast {
+	transition: all $transition-speed-fast $transition-ease;
+}
+
+// Button mixins
+@mixin button-base {
+	padding: 10px 20px;
+	border: none;
+	border-radius: $border-radius-sm;
+	cursor: pointer;
+	@include transition-standard;
+	font-weight: $font-weight-medium;
+	font-size: $font-size-base;
+	margin: 0 $spacing-xs;
+}
+
+@mixin button-primary {
+	@include button-base;
+	background-color: $primary-color;
+	color: white;
+
+	&:hover {
+		background-color: color.scale($primary-color, $lightness: -10%);
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+@mixin button-secondary {
+	@include button-base;
+	background-color: $secondary-color;
+	color: white;
+
+	&:hover {
+		background-color: color.scale($secondary-color, $lightness: -10%);
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+// Animation mixins
+@mixin spin-animation {
+	// First we declare the animation, then @keyframes
+	animation: spin 1s linear infinite;
+
+	// Definition of keyframes
+	@at-root {
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	}
+}
+
+// Responsive mixins
+@mixin mobile {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 768px) and (max-width: 1023px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+
+// Typography mixins
+@mixin heading-large {
+	font-size: $font-size-large;
+	font-weight: $font-weight-bold;
+	color: $text-color;
+	margin-bottom: $spacing-sm;
+}
+
+@mixin heading-medium {
+	font-size: 1.5em;
+	font-weight: $font-weight-bold;
+	color: $text-color;
+	margin-bottom: $spacing-xs;
+}
+
+@mixin text-small {
+	font-size: $font-size-small;
+	line-height: $line-height-base;
+}

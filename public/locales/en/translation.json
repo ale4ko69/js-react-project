@@ -62,7 +62,10 @@
 			"id": "ID",
 			"name": "Name",
 			"username": "Username",
-			"email": "Email"
+			"email": "Email",
+			"age": "Age",
+			"education": "Education",
+			"gender": "Gender"
 		}
 	},
 	"contact": {
@@ -87,5 +90,16 @@
 		"short": "MM/dd/yyyy",
 		"time": "h:mm a",
 		"timeWithSeconds": "HH:mm:ss"
+	},
+	"statistics": {
+		"userStatistic": "User Statistics",
+		"totalUsers": "Total Users",
+		"averageAge": "Average Age",
+		"educationLevels": "Education Levels",
+		"genderDistribution": "Gender Distribution",
+		"male": "Male",
+		"female": "Female",
+		"educationLevelsDescription": "in percentage",
+		"noData": "No data available for statistics"
 	}
 }

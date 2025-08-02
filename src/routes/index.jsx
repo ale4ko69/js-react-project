@@ -26,45 +26,45 @@ const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <Home />,
+				element: <Home id="route-home" />,
 			},
 			{
 				path: "hooks",
-				element: <ReactHooks />,
+				element: <ReactHooks id="route-hooks" />,
 			},
 			{
 				path: "technologies",
-				element: <Technologies />,
+				element: <Technologies id="route-technologies" />,
 				children: [
 					{
 						index: true,
-						element: <HomePage />, // We use homepage as a default component for ABOUT
+						element: <HomePage id="route-technologies-home" />, // We use homepage as a default component for ABOUT
 					},
 					{
 						path: "react",
-						element: <ReactPage />,
+						element: <ReactPage id="route-technologies-react" />,
 					},
 					{
 						path: "vite",
-						element: <VitePage />,
+						element: <VitePage id="route-technologies-vite" />,
 					},
 					{
 						path: "router",
-						element: <RouterPage />,
+						element: <RouterPage id="route-technologies-router" />,
 					},
 					{
 						path: "redux",
-						element: <ReduxPage />,
+						element: <ReduxPage id="route-technologies-redux" />,
 					},
 					{
 						path: "scss",
-						element: <ScssPage />,
+						element: <ScssPage id="route-technologies-scss" />,
 					},
 				],
 			},
 			{
 				path: "contact",
-				element: <Contact />,
+				element: <Contact id="contact" />,
 			},
 			{
 				path: "*",

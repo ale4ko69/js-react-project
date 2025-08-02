@@ -96,12 +96,61 @@ The project includes a comprehensive example of React Hooks usage:
 
 ## Getting Started
 
+### Setting Up a New Project
+
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/ale4ko69/js-react-project my-new-project
+   cd my-new-project
+   ```
+
+2. Remove the connection to the original repository:
+   ```bash
+   rm -rf .git
+   ```
+
+3. Initialize a new Git repository:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit from template"
+   ```
+
+4. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   This will start the development server at `http://localhost:5173` (or another port if 5173 is in use).
+
+### Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint to check code quality
+- `npm run format` - Run Prettier to format code
+
+### Building for Production
+
+To create a production-ready build:
 
 ```bash
-git clone [repository-url]
-cd [folder-name]
+npm run build
 ```
+
+This will generate optimized files in the `dist` directory, which you can deploy to any static hosting service.
+
+### Customizing the Template
+
+- **Adding new pages**: Create new components in the `src/pages` directory and add routes in `src/routes/index.jsx`
+- **Adding new components**: Create components in the `src/components` directory
+- **Modifying styles**: Edit or add SCSS files in the `src/styles` directory
+- **Adding Redux slices**: Create new slices in the `src/store/slices` directory and register them in the store
 
 ## Internationalization (i18n)
 
@@ -198,3 +247,7 @@ The project includes a VS Code workspace configuration file (`js-react-project.c
 	"anseki.vscode-color", // Choosing flowers
 	"bierner.color-info"); // Information about flowers
 ```
+
+## License
+
+MIT © [Alexey Kagansky](https://github.com/ale4ko69)

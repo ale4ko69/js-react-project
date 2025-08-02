@@ -5,13 +5,13 @@
 /***************************************/
 import { useTranslation } from "react-i18next";
 
-function ReduxPage() {
+function ReduxPage({ id }) {
 	const { t } = useTranslation();
 
 	document.title = `${t("technologies.title")} - Redux`;
 
 	return (
-		<div className="tech-info">
+		<div id={id} className="tech-info">
 			<h2>{t("technologies.redux")}</h2>
 			<div className="tech-description">
 				<p>{t("technologies.reduxDescription")}</p>

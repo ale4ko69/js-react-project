@@ -6,14 +6,14 @@
 import { useTranslation } from "react-i18next";
 import HtmlToTag from "../components/HtmlToTag";
 
-function Contact() {
+function Contact({ id }) {
 	const { t } = useTranslation();
 
 	// Set document title
 	document.title = t("contact.title");
 
 	return (
-		<div className="contact-container">
+		<div id={id} className="contact-container">
 			<h1>{t("contact.title")}</h1>
 			<div className="contact-content">
 				{<HtmlToTag tag={"p"} htmlContent={t("contact.description")} />}

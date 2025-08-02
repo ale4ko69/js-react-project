@@ -1,0 +1,134 @@
+/**
+ * Styles for the language switcher component
+ */
+@use "sass:color";
+@use "../../styles/variables" as *; // Using variables directly
+@use "../../styles/mixins" as mix; // We use mixins with the prefix mix
+
+@layer components {
+	.statistics-container {
+		display: flex;
+		width: 100%;
+		margin: 1rem 0 3rem;
+		gap: 1rem;
+		box-sizing: border-box;
+
+        h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+		/* Styles for all cards */
+		.statistics-card {
+			/* --- Key properties for dynamic width --- */
+
+			min-width: 150px; /* Minimum width */
+			flex-grow: 1; /* By default, each card 'grows' by 1 fraction (1fr)*/
+
+			/*
+                flex-basis: 0; в in combination with flex-grow makes the cards
+                divide the space strictly in the specified proportions, ignoring their base size.
+            */
+			flex-basis: 0;
+
+			position: relative; /* For absolute positioning of the footer */
+
+			/* --- Decorative styles for clarity --- */
+			background-color: #f0f4f8;
+			border: 1px solid #d9e2ec;
+			border-radius: 8px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+			transition: all 0.3s ease;
+
+			/* --- Styles for the first div --- */
+			> div:nth-of-type(1) {
+				padding: 1.5rem;
+			}
+		}
+
+		.statistics-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Мidentifier for the "double" card */
+		.statistics-card--double {
+			flex-grow: 2; /* This card will take up 2 parts (2fr) of the free space. */
+			background-color: #e6f7ff; /* Another color for clarity */
+			border-color: #91d5ff;
+		}
+
+		/* Styles for conтента внутри карточек */
+		.card-title {
+			margin-top: 0;
+			margin-bottom: 8px;
+			color: #1f2937;
+			font-size: 1.2rem;
+			font-weight: 600;
+		}
+
+		.card-content {
+			color: #4b5563;
+			display: flex;
+			gap: 8px;
+			align-items: flex-start;
+		}
+
+		.card-footer {
+			padding: 0.1rem 1rem;
+			font-size: 0.875rem;
+			background-color: #d9e2ec;
+			max-height: 50px;
+			width: 100%;
+			border-top: none;
+			border-bottom: 1px solid #d9e2ec;
+			border-radius: 8px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			display: flex;
+			gap: 0.5rem;
+		}
+
+		/* Styles for gender statistics chips */
+		.gender-chip {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #e2e8f0;
+			border-radius: 8px;
+			padding: 0;
+			font-size: 0.875rem;
+			line-height: 1;
+			overflow: hidden;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+			.chip-label {
+				padding: 6px 12px;
+				font-weight: 500;
+			}
+
+			.chip-value {
+				background-color: #3b82f6;
+				color: white;
+				padding: 6px 12px;
+				font-weight: 600;
+			}
+
+			&.male {
+				.chip-value {
+					background-color: #3b82f6; /* Blue for men */
+				}
+			}
+
+			&.female {
+				.chip-value {
+					background-color: #ec4899; /* Pink for women */
+				}
+			}
+		}
+
+        &.no-data {
+            margin: 2rem auto;
+        }
+	}
+}
