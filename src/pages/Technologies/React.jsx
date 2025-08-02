@@ -5,7 +5,7 @@
 /***************************************/
 import { useTranslation } from "react-i18next";
 
-function ReactPage({}) {
+function ReactPage({ id }) {
 	const { t } = useTranslation();
 
 	document.title = `${t("technologies.title")} - React`;

@@ -30,6 +30,9 @@ src/
 ├── assets/               # Static assets (images, icons)
 ├── components/           # Reusable components
 │   └── Layout.jsx        # Main application layout
+│   └── UserStatistics/   # User statistics component
+│       ├── UserStatistics.jsx     # Component implementation
+│       └── UserStatistics.scss    # Component styles
 ├── hooks/                # Custom React hooks
 │   └── useFetchData.js   # Hook for fetching data from API
 ├── pages/                # Page components
@@ -87,6 +90,15 @@ The project includes a comprehensive example of React Hooks usage:
   - Conditional rendering based on state
   - Integration with SCSS modules for styling
 
+### User Statistics Component
+
+- Responsive statistics cards with flexible layout
+- Dynamic content display based on user data
+- Gender-specific styling for demographic data
+- Flex-based layout with proportional card sizing
+- Hover effects and visual feedback
+- Support for different card sizes (standard and double-width)
+
 ### Styling
 
 - SCSS is set up for convenient styling
@@ -96,7 +108,12 @@ The project includes a comprehensive example of React Hooks usage:
 
 ## Getting Started
 
-### Setting Up a New Project
+### Using GitHub Template
+
+The easiest way to use this template is by clicking the **"Use this template"** button at the top of the repository page on GitHub. This will create a new repository in your account with all the files from this template, without the commit history.
+
+
+### Setting Up a New Project Manually
 
 1. Clone the repository:
    ```bash
@@ -178,6 +195,7 @@ public/
 
 ### Components
 
+- **UserStatistics** - Сomponent for displaying various user statistics
 - **LanguageSwitcher** – Component for changing the application language
 - **WelcomeWithDate** – Demonstrates date and time formatting with i18n
 - **HtmlToTag** – Utility component for rendering HTML content from translations
