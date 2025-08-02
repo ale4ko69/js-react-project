@@ -6,7 +6,7 @@
 
 
 // Possible values for gender
-const GENDERS = ["male", "female"];
+const GENDERS = ["\u{1F468}", "\u{1F469}"];
 
 // Possible meanings for education
 const EDUCATION_LEVELS = ["Higher", "Technical", "Average", "None"];

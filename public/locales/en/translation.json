@@ -92,7 +92,7 @@
 		"timeWithSeconds": "HH:mm:ss"
 	},
 	"statistics": {
-		"userStatistic": "User Statistics",
+		"userStatistic": "Users Statistics",
 		"totalUsers": "Total Users",
 		"averageAge": "Average Age",
 		"educationLevels": "Education Levels",
